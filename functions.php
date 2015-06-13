@@ -14,4 +14,8 @@
 		'footer' => __( 'Footer Menu'),
 	));
 
+	// Permite os posts terem thumbnails (usado para os logos dos núcleos/secções culturais/etc)
+	// https://codex.wordpress.org/Post_Thumbnails
+	add_theme_support('post-thumbnails');
+
 ?>
