@@ -1,0 +1,101 @@
+
+<!--............................  NAVBAR................................ -->
+	<nav id="navBar">
+		<div class= "container navbar navbar-inverse" role="navigation">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menu">
+	        	    <i class="fa fa-bars"></i>
+	    	    </button>
+	        </div>
+	        <div class="collapse navbar-collapse navbar-menu">
+	            <ul class="nav navbar-nav navbar-center pontos">
+	                <li><a id="academia">ACADEMIA</a></li>
+		     		<li><a id="sociais">ORGÃOS SOCIAIS </a></li> 
+		     		<li><a href="nucleos.php">NÚCLEOS</a></li> 
+		     		<li><a href="desporto.php">DESPORTO</a></li> 
+		     		<li><a id="cultura">CULTURA</a></li> 
+		     		<li><a href="contactos.php">CONTACTOS</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	    <div id="academiaA" class= "container navbar cor">
+	        <div class="collapse navbar-collapse navbar-menu cor">
+	         	<ul class="nav navbar-nav navbar-center pontos">
+		            <li><a href="noticias.php">Notícias</a></li>
+			 		<li><a href="republicas.php">Repúblicas</a></li> 
+			 		<li><a href="latada.php">Festa das Latas</a></li> 
+			 		<li><a href="queima.php">Queima das Fitas</a></li> 
+			 		<li><a href="veteranos.php">Conselho de Veteranos</a></li>
+	        	</ul>
+	        </div>
+	    </div>
+	    <div id="OSociais" class= "container navbar cor">
+	        <div class="collapse navbar-collapse navbar-menu cor">
+	        	<ul class="nav navbar-nav navbar-center pontos">
+		           <li><a href="DG.php">Direção-Geral</a></li>    		
+		           <li><a href="magna.php">Mesa da Assembleia Magna</a></li>     		
+		           <li><a href="conselho.php">Conselho Fiscal</a></li> 
+	        	</ul>
+	       </div>
+	    </div>
+	    <div id="seccoesD" class= "container navbar cor">
+	        <div class="collapse navbar-collapse navbar-menu cor">
+	         	<ul class="nav navbar-nav navbar-center pontos">
+		            <li><a href="S_culturais.php">Secções Culturais</a></li>
+			 		<li><a href="Grup_Academicos.php">Grupos Académicos</a></li> 
+			 		<li><a href="org_auto.php">Organismos Autónomos</a></li>
+	        	</ul>
+	        </div>
+	    </div>
+    </nav>
+<!-- .................................................................................... -->
+
+<!-- ............................SCRIPT PARA NAVBAR..................................... -->	
+<script>
+	$("#academiaA").hide();
+	$("#OSociais").hide();
+	$("#seccoesD").hide();
+
+	$("#academia").click(function() { 
+	    // assumes element with id='button'
+	    $("#academiaA").toggle("slow", function() {});
+	    $("#OSociais").hide();
+	    $("#seccoesD").hide();
+
+	});
+
+	$("#sociais").click(function() { 
+	    // assumes element with id='button'
+	    $("#OSociais").toggle("slow", function() {});
+	    $("#academiaA").hide();
+	    $("#seccoesD").hide();
+	});
+	 $("#cultura").click(function() { 
+	    // assumes element with id='button'
+	     $("#seccoesD").toggle("slow", function() {});
+	    $("#academiaA").hide();
+	    $("#OSociais").hide();
+	});
+     var cores=[
+        "rgb(0,70,127)", //letras
+        "rgb(238,50,36)", //direito
+        "rgb(255,196,37)", //medicina
+        "rgb(0,150,215)", // c e tecnologia
+        "rgb(83,36,127)", // farmacia
+        "rgb(249,157,49)", //psicologia
+        "rgb(85,25,0)"]; //desporto
+     window.onload = function() {
+        randomColor();
+        
+        }
+     function randomColor(){
+        var r = parseInt(Math.random()*cores.length);
+
+        var j = document.getElementById("agenda");
+
+
+     }
+</script>
+
+<!-- .................................................................................... -->	
+
