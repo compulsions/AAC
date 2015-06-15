@@ -4,6 +4,8 @@
 
 	get_header();
 
+	$number_posts_per_page = 3;
+
 	$cat_id;
 	$cats = get_categories( );
 
@@ -31,8 +33,25 @@
 	echo "<small>(A Mostrar só algumas categorias)</small>";
 	echo "<h2>A mostrar posts da categoria: ". $custom_value[0] . "</h2>";
 
-	query_posts('cat=' . $cat_id );
-	if (have_posts()) :
+
+	// Se estiver na página de notícias, ele só mostra X artigos, e põe paginação (ver abaixo)
+	if ($pagename == 'noticias') {
+
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$args = array(
+		  'posts_per_page' => $number_posts_per_page,
+		  'paged' => $paged,
+		  'cat' => $cat_id
+		);
+
+		query_posts($args);
+	} else {
+		//Se estiver noutras páginas, mostra todas as páginas dessa categoria
+		query_posts('cat=' . $cat_id);
+	}
+
+	if (have_posts()) {
+
 		while (have_posts()) : the_post() ?>
 
 			<article>
@@ -48,11 +67,19 @@
 				<?php the_content( ); ?>
 			</article>
 
-		<?php endwhile;
+		<?php endwhile; 
+			// Zona para a paginação, caso esteja nas notícias
+			if ($pagename == 'noticias') { ?>
+		
+				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
-	else:
+		<?php
+			}
+
+	} else {
 		echo "<p>No content Found</p>";
-	endif;
+	}
 
 	wp_reset_query();
 
