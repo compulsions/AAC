@@ -9,3 +9,7 @@ Version: 1.0
 	max-width: 900px;
 	margin: 0 auto;
 }
+
+#category a {
+    color: hotPink;
+}
