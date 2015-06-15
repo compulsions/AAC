@@ -33,7 +33,6 @@
 	echo "<small>(A Mostrar só algumas categorias)</small>";
 	echo "<h2>A mostrar posts da categoria: ". $custom_value[0] . "</h2>";
 
-
 	// Se estiver na página de notícias, ele só mostra X artigos, e põe paginação (ver abaixo)
 	if ($pagename == 'noticias') {
 
