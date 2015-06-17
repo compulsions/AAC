@@ -14,8 +14,8 @@ section{
   text-decoration: none;
   font-size: 19px;
   margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .navbar a:hover {
@@ -29,6 +29,15 @@ section{
 	padding-right: 5px;
 	
 }
+.marginTop{
+	margin-top: 20px;
+}
+.margensEmprego{
+	font-family: 'Roboto';
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
 a {
   color:#1C1C1C;
   text-decoration: none;
@@ -109,6 +118,23 @@ a:focus{
 	line-height: 24pt;
 	margin-bottom: 40px;
 	font-size: 30px;
+}
+
+.nucleosG img{
+	opacity: 1;
+	margin-top: 10px;
+	height: 150px;
+}
+.nucleosG img:hover{
+	opacity: 0.6;
+	margin-top: 10px;
+}
+.nucleosG h2{
+	margin-top: 5px;
+	height: 40px;
+	line-height: 24pt;
+	margin-bottom: 40px;
+	font-size: 25px;
 }
 
 @media(min-width: 1200px){
@@ -226,6 +252,12 @@ a:focus{
 	line-height: 18pt;
 
 }
+.nucleosG h2{
+	font-size: 22px;
+	margin-bottom: 32px;
+	line-height: 18pt;
+
+}
 }
 @media (max-width: 768px){
 	.aac img{
@@ -287,6 +319,12 @@ a:focus{
 	line-height: 20pt;
 	margin-top: 10px;
 }
+.nucleosG h2{
+	font-size: 18px;
+	margin-bottom: 20px;
+	line-height: 20pt;
+	margin-top: 2px;
+}
 
 }
 @media (max-width: 480px){
@@ -312,6 +350,9 @@ a:focus{
 
 }
 .nucleos img{
+	height: 110px;
+}
+.nucleosG img{
 	height: 110px;
 }
 }
@@ -372,7 +413,7 @@ a:focus{
 	font-family: 'Roboto';
 	font-weight: 700;
 	font-size: 26pt;
-
+	margin-left: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -456,10 +497,7 @@ a:focus{
 	 margin-right: auto;
 	 margin-top: 10px;
 }
-.navbar li{
-	margin-right: 0px;
-	margin-left: 0px;
-}
+
 
 .lermais{
 	color:gray;

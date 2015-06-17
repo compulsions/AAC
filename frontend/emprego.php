@@ -49,51 +49,57 @@
 	?>
 <!-- .................................................................................... -->
 
+
 <!--............................  SECTION DE BASE................................. -->
 	<section>
 		<div class="container cor">
-			<div class="tituloPag"> Secções Culturais</div>
-			<div class="info  nucleosG">
-				
-				<!-- Triggers  SOS ESTUDANTE -->
-				<div class="col-md-3 col-sm-4 col-xs-6 centrar">
-					<a href="base.php?type=S_culturais&id=1&nome=SOS ESTUDANTE"  class="radius button">
-					<img  src="img/seccoes/sos.png" onerror="this.src='notfound.png'" alt="secção cultural">
-					</a>
-					<h2> SOS ESTUDANTE </h2>
+			<div class="tituloPag"> Ofertas de Emprego </div>
+			<!-- ............................... EMPREGO 1  ..................................... -->
+			<div class="container margensEmprego" id="emprego1">
+				<div class="col-md-3">
+					<div class="subtituloPag"> Emprego 1</div>
 				</div>
-				<!--  ................................. -->
-				
-			
-				<!-- Triggers  grupo ecológico -->
-				<div class="col-md-3 col-sm-4 col-xs-6 centrar">
-					<a href="base.php?type=S_culturais&id=2&nome=GRUPO ECOLÓGICO"  class="radius button">
-					<img  src="img/seccoes/ecologico.png" onerror="this.src='notfound.png'" alt="secção cultural">
-					</a>
-					<h2> GRUPO ECOLÓGICO </h2>
+				<div class="col-md-7 marginTop">
+					<p id="infoEmprego">
+						bia xD é so fazeres dois scrolls na conversa e aparece um ficheiro que eu enviei chamado "patrocinios_footer.zip"
+					</p>
 				</div>
-				<!--  ................................. -->
-				 
+				<div class="col-md-2 centrar marginTop">
+					<a href="empregoX.php" class="lermais"> Ler mais</a>
 				</div>
+				<!-- .................................................................................... -->
+			</div>
+			<!-- ............................... EMPREGO 2  ..................................... -->
+			<div class="container margensEmprego" id="emprego1">
+				<div class="col-md-3">
+					<div class="subtituloPag"> Emprego com um titulo maior para ver como fica</div>
+				</div>
+				<div class="col-md-7 marginTop">
+					<p id="infoEmprego">
+						por enquanto nao. ainda nao me enviaram nada. por isso dentro de apoio ao estudante só vai ter o emprego, por enquanto
+					</p>
+				</div>
+				<div class="col-md-2 centrar marginTop">
+					<a href="empregoX.php" class="lermais"> Ler mais</a>
+				</div>
+				<!-- .................................................................................... -->
 			</div>
 		</div>
 
 	</section>
-<!-- .................................................................................... -->
 <!--............................  FOOTER................................ -->
 	<?php
 		include 'footer.html';
 	?>
 <!-- .................................................................................... -->
-   <script src="js/vendor/jquery.js"></script>
+
+    <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
 
 </body>
-
-
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

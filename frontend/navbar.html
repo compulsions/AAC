@@ -14,7 +14,10 @@
 		     		<li><a href="nucleos.php">NÚCLEOS</a></li> 
 		     		<li><a href="desporto.php">DESPORTO</a></li> 
 		     		<li><a id="cultura">CULTURA</a></li> 
+		     		<li><a id="ApoioEstudante">APOIO AO ESTUDANTE</a></li>
 		     		<li><a href="contactos.php">CONTACTOS</a></li>
+		     		
+		     		
 	            </ul>
 	        </div>
 	    </div>
@@ -38,6 +41,13 @@
 	        	</ul>
 	       </div>
 	    </div>
+	    <div id="ApoioEstudanteA" class= "container navbar cor">
+	        <div class="collapse navbar-collapse navbar-menu cor">
+	        	<ul class="nav navbar-nav navbar-center pontos">
+		           <li><a href="emprego.php">Emprego</a></li>    		
+	        	</ul>
+	       </div>
+	    </div>
 	    <div id="seccoesD" class= "container navbar cor">
 	        <div class="collapse navbar-collapse navbar-menu cor">
 	         	<ul class="nav navbar-nav navbar-center pontos">
@@ -55,6 +65,7 @@
 	$("#academiaA").hide();
 	$("#OSociais").hide();
 	$("#seccoesD").hide();
+	$("#ApoioEstudanteA").hide();
 
 	$("#academia").click(function() { 
 	    // assumes element with id='button'
@@ -64,38 +75,31 @@
 
 	});
 
+	$("#ApoioEstudante").click(function() { 
+	    // assumes element with id='button'
+	    $("#ApoioEstudanteA").toggle("slow", function() {});
+	    $("#OSociais").hide();
+	    $("#seccoesD").hide();
+	    $("#academiaA").hide();
+		
+
+	});
+
 	$("#sociais").click(function() { 
 	    // assumes element with id='button'
 	    $("#OSociais").toggle("slow", function() {});
 	    $("#academiaA").hide();
 	    $("#seccoesD").hide();
+	    $("#ApoioEstudanteA").hide();
 	});
 	 $("#cultura").click(function() { 
 	    // assumes element with id='button'
 	     $("#seccoesD").toggle("slow", function() {});
 	    $("#academiaA").hide();
 	    $("#OSociais").hide();
+	    $("#ApoioEstudanteA").hide();
 	});
-     var cores=[
-        "rgb(0,70,127)", //letras
-        "rgb(238,50,36)", //direito
-        "rgb(255,196,37)", //medicina
-        "rgb(0,150,215)", // c e tecnologia
-        "rgb(83,36,127)", // farmacia
-        "rgb(249,157,49)", //psicologia
-        "rgb(85,25,0)"]; //desporto
-     window.onload = function() {
-        randomColor();
-        
-        }
-     function randomColor(){
-        var r = parseInt(Math.random()*cores.length);
-
-        var j = document.getElementById("agenda");
-
-
-     }
-</script>
+	</script>
 
 <!-- .................................................................................... -->	
 

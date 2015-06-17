@@ -54,7 +54,7 @@
 	<section>
 		<div class="container cor">
 			<div class="tituloPag"> Núcleos</div>
-			<div class="info  nucleos">
+			<div class="info  nucleosG">
 				<!-- Triggers  NEA antropologia -->
 				<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 					<a href="base.php?type=nucleos&id=1&nome=NEA/AAC" class="radius button">
