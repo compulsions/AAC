@@ -65,7 +65,7 @@
 					</p>
 				</div>
 				<div class="col-md-2 centrar marginTop">
-					<a href="empregoX.php" class="lermais"> Ler mais</a>
+					<a href="base.php?type=emprego&id=1&nome=Emprego 1" class="lermais"> Ler mais</a>
 				</div>
 				<!-- .................................................................................... -->
 			</div>
@@ -80,7 +80,7 @@
 					</p>
 				</div>
 				<div class="col-md-2 centrar marginTop">
-					<a href="empregoX.php" class="lermais"> Ler mais</a>
+					<a href="base.php?type=desporto&id=1&nome=Emprego com um titulo maior para ver como fica" class="lermais"> Ler mais</a>
 				</div>
 				<!-- .................................................................................... -->
 			</div>
