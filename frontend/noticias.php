@@ -58,7 +58,7 @@
 		</div>
 		<br>
 		<div class="container padding">
-			<div id="noticia1" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+			<div id="noticia1" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
 				<div class="noticia noticia-block cor">
 				<a href="noticia.html?id=noticia1">
 					<div class="nomeNoticia">
@@ -71,7 +71,7 @@
 					<a class="lermais" href="#"> Ler mais </a>
 					</div>	
 			</div>
-			<div id="noticia2" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+			<div id="noticia2" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
 				<div class="noticia noticia-block cor">
 				<a href="noticia.html?id=noticia2 ">
 					<div class="nomeNoticia">
