@@ -1,36 +1,50 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes( );?>>
-	<head>
-		<title><?php bloginfo('name'); ?></title>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<meta name="viewport" content="width=device-width">
-		<?php wp_head(); ?>
+<head>
+	<title><?php bloginfo('name'); ?></title>
 
-	</head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <?php wp_head(); ?>
 
-	<body <?php body_class(); ?> >
-		<div class="container">
+	
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <link href="img/favicon.png" rel="shortcut icon">
+    
+    
+   
+</head>
+<body <?php body_class(); ?>>
+	<header style="margin-bottom:10px;" class="branco">
+		<div class="container titulo">
+			<div class="aac">
+				<div class="col-md-1 col-sm-1 col-xs-12">
+					<a href="<?php echo home_url(); ?>">
+						<img src="img/aac2.png" alt="aac"> 
+					</a> 
+				</div>
+				<div class="col-md-11 col-sm-10 col-xs-12 txt">
+					| <?php bloginfo('name'); ?> 
+				</div>	
+			</div> 
+		</div>
+
+		<?php//  if (is_page('academia/queima-das-fitas')) {
+		//	echo "<p>NUNCA MAIS É QUEIMAAAAAA</p>";
+		//}?>
+
+		<nav class="site-nav">
+					
+			<?php
+			
+			$args = array(
+				'theme_location' => 'primary'
+			);
+			
+			?>
+			
+			<?php wp_nav_menu(  $args ); ?>
+		</nav>
 		
-			<!-- site-header -->
-			<header class="site-header">
-				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-				<h5><?php bloginfo('description'); ?></h5>
-
-				<?php  if (is_page('academia/queima-das-fitas')) {
-					echo "<p>NUNCA MAIS É QUEIMAAAAAA</p>";
-				}?>
-				
-				<nav class="site-nav">
-					
-					<?php
-					
-					$args = array(
-						'theme_location' => 'primary'
-					);
-					
-					?>
-					
-					<?php wp_nav_menu(  $args ); ?>
-				</nav>
-				
-			</header><!-- /site-header -->
+	</header>

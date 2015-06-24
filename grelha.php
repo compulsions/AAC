@@ -49,24 +49,57 @@
 		query_posts('cat=' . $cat_id);
 	}
 
-	if (have_posts()) {
+	if (have_posts()) { ?>
 
-		while (have_posts()) : the_post() ?>
+		<section>
+			<div class="container cor">
+				<div class="tituloPag"> Secções Desportivas</div>
+				<div class="info  nucleos">	
+
+		<?php while (have_posts()) : the_post() ?>
 
 			<article>
-				<h2><a href=" <?php the_permalink(); ?>"><?php the_title( ); ?></a></h2>
-
 				<?php if ( has_post_thumbnail() ) {
-					$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-					echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
-					echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); 
-					echo '</a>';
-				} ?>
 
-				<?php the_content( ); ?>
+					//$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+					//echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
+					//echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); 
+					//echo '</a>';
+
+					?>
+
+					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
+						<a href="<?php the_permalink(); ?>"  class="radius button">
+						<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
+						</a>
+						<h2><?php the_title();?></h2>
+					</div>
+
+					<?php
+
+				} else { ?>
+
+					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
+						<a href="<?php the_permalink(); ?>"  class="radius button">
+						<img  src=" <?php echo get_template_directory_uri() . '/img/notfound.png'; ?>" alt="secção desportiva">
+						</a>
+						<h2><?php the_title();?></h2>
+					</div>
+
+				<?php 
+				}
+				//the_content( ); ?>
 			</article>
 
-		<?php endwhile; 
+		<?php endwhile; ?>
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<?php
 			// Zona para a paginação, caso esteja nas notícias
 			if ($pagename == 'noticias') { ?>
 		
