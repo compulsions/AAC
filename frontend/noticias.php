@@ -97,10 +97,11 @@
 <!-- .................................................................................... -->
     <script>
 
- $("section").each(function(){
- 	if ($(this).offset().top > $(window).height()){	
- 			$(this).hide();
- 		}
+
+      $("#noticias").each(function(){
+  			$(this).hide();
+ 	 		$(this).slideDown($(this).outerHeight()*8);
+
     });
  $(".noticia").each(function(){
  	if ($(this).offset().top > $(window).height()){	
@@ -110,22 +111,6 @@
       /* Every time the window is scrolled ... */
    $(window).scroll( function(){
 	/* Check the location of each desired element */
-    $('section').each( function(i){
-        var top_of_object = $(this).offset().top +400;
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-
-        var top_of_window = $(window).scrollTop();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        console.log( top_of_object);
-        console.log( bottom_of_window);
-
-        /* If the object is completely visible in the window, fade it in */
-        if( bottom_of_window > top_of_object ){
-            $(this).slideDown(1800);
-
-        }
-
-    }); 
     $('.noticia').each( function(i){
         var top_of_object = $(this).offset().top +400;
         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -137,7 +122,7 @@
 
         /* If the object is completely visible in the window, fade it in */
         if( bottom_of_window > top_of_object ){
-            $(this).slideDown(1800);
+            $(this).slideDown($(this).outerHeight()*3);
 
         }
 

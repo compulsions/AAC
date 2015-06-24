@@ -51,7 +51,7 @@
 <!-- .................................................................................... -->
 </section>
 <!--............................  SECTION DE BASE................................. -->
-	<section>
+	<section id="inicial">
 		<div class="container cor">
 			<div class="tituloPag"> Núcleos</div>
 			<div class="info  nucleosG">
@@ -86,36 +86,11 @@
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
-    $(window).load(function() {
-	   $("section").each(function(){
-	 	if ($(this).offset().top > $(window).height()){	
-	 			$(this).hide();
-	 		}else{
-	 			$(this).slideDown(1800);
-	 		}
-	    });
-	   )};
-      /* Every time the window is scrolled ... */
-   $(window).scroll( function(){
-	/* Check the location of each desired element */
-    $('section').each( function(i){
-        var top_of_object = $(this).offset().top +400;
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      $("#inicial").each(function(){
+  			$(this).hide();
+ 	 		$(this).slideDown($(this).outerHeight()*2.5);
 
-        var top_of_window = $(window).scrollTop();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        console.log( top_of_object);
-        console.log( bottom_of_window);
-
-        /* If the object is completely visible in the window, fade it in */
-        if( bottom_of_window > top_of_object ){
-            $(this).slideDown(1800);
-
-        }
-
-    }); 
-
-});
+    });
     </script>
 
  

@@ -48,7 +48,7 @@
 
 		
 <!-- ............................ SECTION DE REPUBLICAS........................... -->
-	<section>
+	<section id="inicial">
 		<div class="container cor">
 			<div class="tituloPag"> Repúblicas</div>
 			<div class="container">
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+
 		<div class="container padding">
 			<!-- ................................´REPUBLI 1 ................................................... -->
 			<div id="republica0" class="col-md-6 col-sm-6 col-xs-12 col-xxs-12 blockR">
@@ -84,9 +84,7 @@
 					<div id="mapa1" class="mapa">
 						<p><div id="mapa-1" style="height:150px;"></div></p>
 					</div>	
-					<a href="https://www.facebook.com/kagados?fref=ts" style="margin-left:20px;" target="_blank;">
-						<i class="fa fa-facebook-square fa-2x" style="color:black"></i>
-					</a>		
+						
 				</div>			
 			</div>
 			<!-- .................................................................................... -->
@@ -102,9 +100,7 @@
 						<div id="mapa2" class="mapa">
 							<p><div id="mapa-2" style="height:150px;"></div></p>
 						</div>
-						<a href="https://www.facebook.com/pages/Real-Rep%C3%BAblica-Ay-%C3%93-Linda/701400279884194?fref=ts" style="margin-left:20px;" target="_blank;">
-						  <i class="fa fa-facebook-square fa-2x" style="color:black"></i>
-						</a>			
+									
 					</div>	
 				</div>			
 			<!-- .................................................................................... -->
@@ -118,9 +114,7 @@
 						<div id="mapa3" class="mapa">
 							<p><div id="mapa-3" style="height:150px;"></div></p>
 						</div>
-						<a href="https://www.facebook.com/pages/Real-Rep%C3%BAblica-Boa-Bay-Ela/133226740035270?fref=ts" style="margin-left:20px;" target="_blank;">
-							<i class="fa fa-facebook-square fa-2x" style="color:black"></i>
-						</a>		
+							
 					</div>	
 				</div>			
 			<!-- .................................................................................... -->
@@ -193,7 +187,6 @@
 
 			</div>
 		</div>
-	</section>
 <!-- .................................................................................... -->
 	
 <!--............................  FOOTER................................ -->
@@ -202,6 +195,43 @@
 	?>
 <!-- .................................................................................... -->
 </body>
+<!-- .................................................................................... -->
+    <script>
+  $("#inicial").each(function(){
+  	$(this).hide();
+ 	 		$(this).slideDown(1800);
+
+    });
+ $(".blockR").each(function(){
+ 	if ($(this).offset().top > $(window).height()){	
+ 			$(this).hide();
+ 		}else{
+	 		$(this).slideDown(1800);
+	 	}
+
+    });
+      /* Every time the window is scrolled ... */
+   $(window).scroll( function(){
+	/* Check the location of each desired element */
+        $('.blockR').each( function(i){
+        var top_of_object = $(this).offset().top +400;
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+
+        var top_of_window = $(window).scrollTop();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        console.log( top_of_object);
+        console.log( bottom_of_window);
+
+        /* If the object is completely visible in the window, fade it in */
+        if( bottom_of_window > top_of_object ){
+            $(this).slideDown(1800);
+
+        }
+
+    }); 
+
+});
+    </script>
 
 
 <!-- SCRIPT POR CAUSA DO MAPA -->
