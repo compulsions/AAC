@@ -62,7 +62,11 @@ Diam hendrerit consectetur orci amet euismod quisque hendrerit nisi consequat so
 			
 			<div id="noticia1" class="col-md-3 centrar">
 				<p><img src="img/aac.jpg" alt="noticia" style="width:100%;"></p>
-				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" ></div>
+				<div id="share_button">
+					<i class="fa fa-facebook-official"></i>
+					Partilhar
+				</div>
+				<!--<a href="javascript:fbShare('img/notfound.php', 'nome', 'Facebook share popup', 'img/notfound.php', 520, 350)">Share</a>-->
 			</div>
 			<div class="col-md-9 noticia info">
 				<p> 	Diam hendrerit consectetur orci amet euismod quisque hendrerit nisi consequat sodales sed curabitur per rhoncus vitae, ultricies libero risus tincidunt neque taciti hac risus magna in auctor vestibulum torquent aenean. sapien nisi donec massa potenti tellus quam suspendisse, dictumst pretium magna volutpat sed fusce eu aenean, donec augue purus leo ornare fames. arcu netus faucibus gravida mauris hac ullamcorper hac venenatis lacus ornare, auctor hendrerit class dapibus tempor scelerisque enim platea ante, ultricies ornare magna nulla vulputate odio augue eget quam. urna lacinia cras convallis ornare vehicula bibendum magna quisque, mauris leo elementum commodo nisi rhoncus adipiscing justo curabitur, gravida ut sed maecenas ornare est dictum. </p>
@@ -80,17 +84,37 @@ Diam hendrerit consectetur orci amet euismod quisque hendrerit nisi consequat so
 
 </body>
 
-
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
+<script>
+	window.fbAsyncInit = function() {
+	FB.init({appId: '1483877931904022', status: true, cookie: true,
+	xfbml: true});
+	};
+	(function() {
+	var e = document.createElement('script'); e.async = true;
+	e.src = document.location.protocol +
+	'//connect.facebook.net/en_US/all.js';
+	document.getElementById('fb-root').appendChild(e);
+	}());
 
 
 
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- .................................................................................... -->	
+	$(document).ready(function(){
+		$('#share_button').click(function(e){
+			e.preventDefault();
+			FB.ui({
+				method: 'feed',
+				name: 'POMBO NENA TORNA-SE PRESIDENTE DA DG!',
+				link: 'http://localhost/AAC/frontend/noticia.php?id=noticia1',
+				picture: 'http://diariodigital.sapo.pt/images_content/pombo250712.jpg',
+				caption: '',
+				description: 'Conferência de imprensa amanha',
+				message: ''
+				});
+			});
+		});
+</script>
+
+
+<!-- .................................. -->	
 </html>
