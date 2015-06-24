@@ -7,19 +7,81 @@ Version: 1.0
 
 body{
 	background-color: #DEDEDE;
-	font-size: 13pt;
+	font-size: 11pt;
 }
+
+a {
+  color:#1C1C1C;
+  text-decoration: none;
+}
+
+a:hover {
+  color:black;
+  text-decoration: none;
+}
+
+a:focus{
+  text-decoration: none;
+
+}
+
+.barra_preta{
+	background-color: #1C1C1C;
+	color: white;
+	padding: 20px 40px;
+
+}
+
+.barra_preta a {
+	background-color: #1C1C1C;
+	color: white;
+    text-decoration: none;
+}
+
+.branco{
+	background-color: white;
+}
+
+.cor{
+	background-color: white;
+
+}
+.cor2{
+	padding-top: 5px;
+	background-color: #1C1C1C;
+	height: 35px;
+	color: white;
+
+}
+
 p{
-	font-size: 13pt;
+	font-size: 11pt;
 }
+
+.patro-70 {
+    color: white;
+    width: 70%;
+}
+
+.patro-100 {
+    color: white;
+    width: 100%;   
+}
+
 section{
 	margin-top: 20px;
 }
-footer p{
-	margin-bottom: 5px;
-	font-size: 
 
+.marginTop{
+	margin-top: 20px;
 }
+
+.margensEmprego{
+	font-family: 'Roboto';
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
 .navbar a {
 	padding-bottom: 0px;
   color:#1C1C1C;
@@ -35,61 +97,20 @@ footer p{
   border-bottom: solid 2px;
   margin-bottom: 0px;
 }
+
 .navbar-nav>li>a{
 	padding-bottom: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
 	
 }
-.marginTop{
-	margin-top: 20px;
-}
-.margensEmprego{
-	font-family: 'Roboto';
-	font-weight: 300;
-	margin-bottom: 30px;
-}
 
-a {
-  color:#1C1C1C;
-  text-decoration: none;
-}
-
-a:hover {
-  color:black;
-  text-decoration: none;
-}
-a:focus{
-  text-decoration: none;
-
-}
-
-.cor{
-	background-color: white;
-
-}
-.cor2{
-	padding-top: 5px;
-	background-color: #1C1C1C;
-	height: 35px;
-	color: white;
-
-}
-.cor3{
-	padding-top: 5px;
-	background-color: #1C1C1C;
-	color: white;
-	padding-top: 5px;
-
-}
-.branco{
-	background-color: white;
-}
 .homepagefoto{
 	opacity: 0.6;
 	width:100%;
 	overflow: hidden;
 }
+
 .cenas{
 	position: absolute;
 	top:15%;
@@ -104,9 +125,11 @@ a:focus{
 
 
 }
+
 .diminui{
 	font-size: 13pt;
 }
+
 .slides{
 	background-color: white;
 	width:100%;
@@ -639,6 +662,15 @@ a:focus{
 	height:200px; 
 	color:white;
 }
+
+.patro-70 img {
+    width: 70%;
+}
+
+.patro-100 img {
+    width: 100%;   
+}
+
 .procura{
 	color:gray;
 	margin-top: 10px;
