@@ -289,7 +289,7 @@ a:focus{
 
 }
 .republica-block{
-	height: 420px;
+	height: 330px;
 }	
 }
 @media (max-width: 768px){
@@ -392,6 +392,9 @@ a:focus{
 .diminui{
 	font-size: 11pt;
 }
+.republica-block{
+	height: 360px;
+}
 }
 @media (max-width: 350px){
 	.aac img{
@@ -415,6 +418,9 @@ a:focus{
 }
 .diminui{
 	font-size: 11pt;
+}
+.republica-block{
+	height: 390px;
 }
 }
 .aac2{

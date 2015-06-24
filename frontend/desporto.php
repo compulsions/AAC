@@ -49,7 +49,7 @@
 
 
 <!--............................  SECTION DE BASE................................. -->
-	<section>
+	<section id="inicial">
 		<div class="container cor">
 			<div class="tituloPag"> Secções Desportivas</div>
 			<div class="info  nucleos">
@@ -120,6 +120,13 @@
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
+            $("#inicial").each(function(){
+  			$(this).hide();
+ 	 		$(this).slideDown($(this).outerHeight()*2.5);
+
+    });
+    </script>
+
     </script>
 
 </body>
