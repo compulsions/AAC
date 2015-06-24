@@ -21,7 +21,7 @@
 			<div class="aac">
 				<div class="col-md-1 col-sm-1 col-xs-12">
 					<a href="<?php echo home_url(); ?>">
-						<img src="img/aac2.png" alt="aac"> 
+						<img src="<?php echo get_template_directory_uri()?>/img/aac2.png" alt="aac"> 
 					</a> 
 				</div>
 				<div class="col-md-11 col-sm-10 col-xs-12 txt">
