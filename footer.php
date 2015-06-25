@@ -54,7 +54,7 @@
 					<img align="center" class="patro pw_70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/superbock.png" ?>">
 				</div>
 				<div class="col-md-4 col-xxs-4 centrar">
-					<img align="center" class="patro pw_70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/ipdj.png" ?>">
+					<img align="center" class="patro2 pw_70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/ipdj.png" ?>">
 				</div>
         </div>
         

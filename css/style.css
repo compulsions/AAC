@@ -196,7 +196,7 @@ a:focus{
 	height: 100vh;
 }
 
-.homepagefoto{
+.homepagefoto {
 	opacity: 0.6;
 	width:100%;
 	overflow: hidden;
@@ -404,6 +404,12 @@ p{
     -ms-filter: invert(1);
     -o-filter: invert(1);
     
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.patro2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
