@@ -1,6 +1,7 @@
 <?php
 
 	get_header();
+	include 'slideshow.php';
 	?>
 
 	<section>

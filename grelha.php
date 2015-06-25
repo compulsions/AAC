@@ -2,7 +2,6 @@
 	Template Name: Grelha
 	*/
 
-	get_header();
 
 	$number_posts_per_page = 3;
 
@@ -30,9 +29,6 @@
 		}
 	}
 
-	echo "<small>(A Mostrar só algumas categorias)</small>";
-	echo "<h2>A mostrar posts da categoria: ". $custom_value[0] . "</h2>";
-
 	// Se estiver na página de notícias, ele só mostra X artigos, e põe paginação (ver abaixo)
 	if ($pagename == 'noticias') {
 
@@ -49,11 +45,17 @@
 		query_posts('cat=' . $cat_id);
 	}
 
+	get_header();
+	//echo "<small>(A Mostrar só algumas categorias)</small>";
+	//echo "<h2>A mostrar posts da categoria: ". $custom_value[0] . "</h2>";
+
+	include 'slideshow.php';
+
 	if (have_posts()) { ?>
 
 		<section>
 			<div class="container cor">
-				<div class="tituloPag"> Secções Desportivas</div>
+				<div class="tituloPag"> <?php echo $custom_value[0] ?></div>
 				<div class="info  nucleos">	
 
 		<?php while (have_posts()) : the_post() ?>
