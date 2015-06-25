@@ -10,16 +10,13 @@
 
 	$custom_value = get_post_custom_values('categoria');
 	//echo "Custom value desta página: " . $custom_value[0] . "<br>";
-
 	//print_r($cats);
 
 	// ir ver a variável que a página passa
 	// comparar com os nomes das categorias
 	// só mostrar os posts dessa categoria
 
-
 	for ($i=0; $i < sizeof($cats); $i++) { 
-
 		//echo "ID: " . $cats[$i]->term_id . " Nome: ". $cats[$i]->name . "<br>";
 
 		if ($cats[$i]->name == $custom_value[0]) {
@@ -58,34 +55,53 @@
 				<div class="tituloPag"> <?php echo $custom_value[0] ?></div>
 				<div class="info  nucleos">	
 
-		<?php while (have_posts()) : the_post() ?>
+		<?php while (have_posts()) : the_post()?>
 
 			<article>
-				<?php if ( has_post_thumbnail() ) {
+				<?php
+
+				if ($pagename == 'nucleos-2') {
+					$titulo = get_post_meta($post->ID, 'sigla', true);
+				}
+				else {
+					$titulo = get_the_title();
+				}
+				
+
+				if ( has_post_thumbnail() ) {
 
 					//$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
 					//echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
 					//echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); 
 					//echo '</a>';
 
+					//$meta =  get_post_meta(get_the_id(), 'sigla', true);
+					//$meta =  get_post_custom();
+
 					?>
 
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
-						<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
+							<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
 						</a>
-						<h2><?php the_title();?></h2>
+						<h2><?php echo $titulo; ?></h2>
+						
 					</div>
 
 					<?php
 
-				} else { ?>
+				} else { 
+
+					
+
+					?>
+
 
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
-						<img  src=" <?php echo get_template_directory_uri() . '/img/notfound.png'; ?>" alt="secção desportiva">
+							<img  src=" <?php echo get_template_directory_uri() . '/img/notfound.png'; ?>" alt="secção desportiva">
 						</a>
-						<h2><?php the_title();?></h2>
+						<h2><?php echo $titulo; ?></h2>
 					</div>
 
 				<?php 
