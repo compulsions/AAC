@@ -1,38 +1,20 @@
+<?php
+    get_header();
+?>
+
+    <div id="header">
+		<div class="gallery js-flickity"  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false ,"wrapAround": true, "freeScroll": true}'>
+		  <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/1.png"?>" alt="..." />
+		  <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/1.png"?>" alt="..."s />
+		</div>
+		<div class="container titulo">
+			<a href="index.php"><img src="<?php echo get_template_directory_uri() . "/img/aac2.png"?>" alt="aac" class="aac2"> </a>
+            
+			<h1  class="cenas"> Associação Académica de Coimbra </h1> 
+				
+		</div>
+	</div>
+
 <?php 
-
-	get_header();
-
-	if (have_posts()) :
-		while (have_posts()) : the_post() ?>
-
-	<article>
-		<h2><a href=" <?php the_permalink(); ?>"><?php the_title( ); ?></a></h2>
-		<?php the_content( ); ?>
-	</article>
-
-	<?php endwhile;
-
-	else:
-		echo "<p>No content Found</p>";
-	endif; ?>
-
-    <article>
-        <div id="category">
-            <?php
-                $tags = get_tags();
-                echo "tags: ";
-                if ($tags) {
-                    foreach ($tags as $tag) {
-                        echo '<br><a href="' . get_tag_link ($tag->term_id) . '"> '. $tag->name . '</a>'; 
-                    }
-                }
- 
-            ?>
-        </div>
-    </article>
-
-
-    <?php
-
-	get_footer( );
+    get_footer();
 ?>

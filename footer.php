@@ -35,26 +35,26 @@
 			<div class="col-md-3 col-sm-6 col-xxs-3">
 
 				<div class="col-md-4 col-xxs-4 centrar">
-					<img align="center" class="patro-100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/uc.png" ?>">
+					<img align="center" class="patro pw_100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/uc.png" ?>">
 				</div>
 
 				<div class="col-md-4 col-xxs-4 centrar">
-					<img align="center" class="patro-100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/sasuc.png" ?>">
+					<img align="center" class="patro pw_100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/sasuc.png" ?>">
 				</div>
 
 				<div class="col-md-4 col-xxs-4 centrar">
-					<img align="center" class="patro-100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/montepio.png" ?>">
+					<img align="center" class="patro pw_100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/montepio.png" ?>">
 				</div>
 
 				<div class="col-md-4 col-xxs-4 centrar">
-					<img align="center" class="patro-70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/moche.png" ?>">
+					<img align="center" class="patro pw_70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/moche.png" ?>">
 				</div>
 
 				<div class="col-md-4 col-xxs-4 centrar">
-					<img align="center" class="patro-70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/superbock.png" ?>">
+					<img align="center" class="patro pw_70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/superbock.png" ?>">
 				</div>
 				<div class="col-md-4 col-xxs-4 centrar">
-					<img align="center" class="patro-70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/ipdj.png" ?>">
+					<img align="center" class="patro pw_70" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/ipdj.png" ?>">
 				</div>
         </div>
         
