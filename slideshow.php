@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="col-md-4 procura">
-				<input type="text" value="procura" />
+				<input type="text" placeholder="procura" autofocus />
 				<button type="submit"> PROCURAR</button>
 			</div>
 		</div>

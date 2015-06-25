@@ -16,6 +16,11 @@
    
 </head>
 <body <?php body_class(); ?>>
+
+    <?php
+    if (! is_home()) { 
+    ?>
+                
 	<header style="margin-bottom:10px;" class="branco">
 		<div class="container titulo">
 			<div class="aac">
@@ -29,22 +34,32 @@
 				</div>	
 			</div> 
 		</div>
+        
+        <?php
+            }
+        ?>
 
 		<?php//  if (is_page('academia/queima-das-fitas')) {
 		//	echo "<p>NUNCA MAIS É QUEIMAAAAAA</p>";
 		//}?>
+ 
 
 		<nav class="site-nav">
 					
 			<?php
+            if (! is_home()) { 
 			
 			$args = array(
 				'theme_location' => 'primary'
 			);
 			
-			?>
-			
-			<?php wp_nav_menu(  $args ); ?>
+            wp_nav_menu(  $args ); 
+            
+            }
+            ?>
+            
 		</nav>
+
+        
 		
 	</header>

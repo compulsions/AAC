@@ -12,6 +12,7 @@
         
         <div class="container barra_preta">
             <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-6">
+                <br>
                 <p><a href="https://www.facebook.com/DGAAC?fref=ts" target="_blank">Facebook</a></p>
 				<p><a href="http://original.livestream.com/tvaac" target="_blank">TVAAC</a></p>
 				<p><a href="http://www.ruc.pt/wp-content/themes/ruc/player.php#" target="_blank">RUC</a></p>
