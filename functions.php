@@ -7,12 +7,14 @@
 		wp_enqueue_style('flickity-docs', get_template_directory_uri() . "/css/flickity-docs-slide.css");
 		wp_enqueue_style('lightbox', get_template_directory_uri() . "/css/lightbox.css");
 		wp_enqueue_style('style', get_template_directory_uri() . "/css/style.css");
-		
 
-		wp_enqueue_script('modernizer', get_template_directory_uri() . "/js/vendor/modernizr.js");
-		wp_enqueue_script('jquery', get_template_directory_uri() . "/js/jquery.min.js");
+		//wp_enqueue_script('modernizer', get_template_directory_uri() . "/js/vendor/modernizr.js");
+		//wp_enqueue_script('jquery', "https://code.jquery.com/jquery-2.1.4.min.js");
+		wp_enqueue_script('jquery', get_template_directory_uri() . "/js/jquery-2.1.4.min.js");
+		wp_enqueue_script('navbar', get_template_directory_uri() . "/js/navbar.js");
 		wp_enqueue_script('flickity', get_template_directory_uri() . "/js/flickity-docs.min.js");
 		wp_enqueue_script('randomcores', get_template_directory_uri() . "/js/randomcores.js");
+		
 		
 	}
 
