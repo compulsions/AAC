@@ -1,8 +1,14 @@
 <?php
 
 	get_header();
+	include 'navbar.php';
 	include 'slideshow.php';
-	?>
+	//$pages = get_pages( );
+
+	//for ($i=0; $i < sizeof($pages); $i++) { 
+		//echo "<p>" . $pages[$i]->guid . '</p>';
+	//}
+?>
 
 	<section>
 		<div class="container cor">
@@ -13,7 +19,7 @@
 				<div class="col-md-3 info centrar">
 
 				
-				<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%')); ?>
+				<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));?>
 
 
 				</div>
@@ -22,7 +28,17 @@
 
 						if (have_posts()) :
 							while (have_posts()) : the_post();
+
+								
 								?>
+							
+
+								<p>
+								<?php 
+									//$pages = get_pages( ); 
+									//echo $pages[5]->guid;
+								?>
+								</p>
 								<p><?php the_content(); ?></p>
 
 								<?php
