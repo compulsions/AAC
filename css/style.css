@@ -109,6 +109,7 @@ a:focus{
 .botoes{
 	font-family: 'Roboto';
 	font-weight: 300;
+    margin-left: 20px;
 }
 
 .branco{
@@ -276,14 +277,15 @@ body.modal-open1 {
 
 <!-- end -->
 
+
 .navbar a {
-	padding-bottom: 0px;
-  color:#1C1C1C;
-  text-decoration: none;
-  font-size: 19px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+    padding-bottom: 0px;
+    color:#1C1C1C;
+    text-decoration: none;
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .navbar a:hover {
@@ -301,8 +303,9 @@ body.modal-open1 {
 
 .noticia{
 	padding: 5px 5px;
-    margin: 10px;
+    margin: 30px 10px 10px 10px;
 	font-size: 12pt;
+    height: 330px;
 }
 
 .noticias{

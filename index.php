@@ -21,40 +21,51 @@
 					
         <?php
 			
-			$args = array(
-				'theme_location' => 'primary'
-			);
-			
-            wp_nav_menu(  $args ); 
-            
+			include 'navbar.php';
         ?>
  
     </nav>
 
     <div class="noticias">
        <?php  
+            $number_posts_per_page = 3;
+
             $cats = get_categories();
-            $cat_id;
+            $cat_id = 3;
 
-            query_posts('cat=3');
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		$args = array(
+		  'posts_per_page' => $number_posts_per_page,
+		  'paged' => $paged,
+		  'cat' => $cat_id
+		);
 
-            while (have_posts()) : the_post(); 
+		query_posts($args);
+
+        while (have_posts()) : the_post(); 
         ?>
-        <div class="col-md-3 col-sm-4 col-xs-6 centrar">
+        <div class="col-md-4 col-sm-4 col-xs-6 centrar">
         <article class="noticia cor">
             <h2><a href="<?php the_permalink(); ?>"  class="radius button"><?php the_title(); ?></a></h2>
             <?php 
             if ( has_post_thumbnail() ) {
-            echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); } ?>
+            echo get_the_post_thumbnail( $post->ID, 'medium' ); } ?>
         </article>
         </div>
             
         <?php
             endwhile;
-            wp_reset_query();
         ?>
     </div>
 
+    <div class="botoes">
+
+        <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+        <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+
+    </div>
+
 <?php 
+    wp_reset_query();
     get_footer();
 ?>
