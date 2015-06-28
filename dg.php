@@ -13,13 +13,15 @@ Template Name: DG
         <div class="col-md-3 col-sm-3 col-xs-12 caixa_branca barralado">
             <ul>
                 <?php
-                $tags = get_tags();
-                if ($tags) {
-                    foreach ($tags as $tag) {
-                        echo '<li><a href="' . get_tag_link ($tag->term_id) . '"> '. $tag->name . '</a></li>'; 
+                query_posts('cat=14');
+                if (have_posts()) : while (have_posts()) : the_post();
+                    if( get_the_tag_list() ){
+                        echo $posttags = get_the_tag_list('<li>','</li><li>','</li>');
                     }
-                }
-            ?>
+
+                endwhile; endif; 
+                wp_reset_query();
+                ?>
             </ul>
         </div>
         
@@ -29,8 +31,6 @@ Template Name: DG
     </section>
 
 <?php
-    wp_reset_query();
-
     get_footer();
 ?>
 

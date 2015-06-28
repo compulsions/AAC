@@ -1,5 +1,5 @@
 <!--............................  NAVBAR................................ -->
-	<nav id="navBar">
+	<nav id="navbar">
 		<div class= "container navbar navbar-inverse" role="navigation">
 	        <div class="navbar-header">
 	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menu">
