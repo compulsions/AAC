@@ -39,7 +39,7 @@
 		query_posts($args);
 	} else {
 		//Se estiver noutras páginas, mostra todas as páginas dessa categoria
-		query_posts('cat=' . $cat_id);
+		query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 	}
 
 	get_header();
