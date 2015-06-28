@@ -116,6 +116,12 @@ a:focus{
 	background-color: white;
 }
 
+.caixa_branca {
+    background-color: white;
+    margin: 5px 22px;
+    padding: 10px;
+}
+
 .cartaz{
 	margin-bottom: 30px;
 

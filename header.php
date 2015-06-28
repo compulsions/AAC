@@ -43,23 +43,5 @@
 		//	echo "<p>NUNCA MAIS É QUEIMAAAAAA</p>";
 		//}?>
  
-
-		<nav class="site-nav">
-					
-			<?php
-            if (! is_home()) { 
-			
-			$args = array(
-				'theme_location' => 'primary'
-			);
-			
-            wp_nav_menu(  $args ); 
-            
-            }
-            ?>
-            
-		</nav>
-
-        
 		
 	</header>
