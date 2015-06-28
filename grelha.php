@@ -16,13 +16,13 @@
 	// comparar com os nomes das categorias
 	// só mostrar os posts dessa categoria
 
-	for ($i=0; $i < sizeof($cats); $i++) { 
-		//echo "ID: " . $cats[$i]->term_id . " Nome: ". $cats[$i]->name . "<br>";
+	foreach ($cats as $cat) {
+		//echo "ID: " . $cat->term_id . " Nome: ". $cat->name . "<br>";
 
-		if ($cats[$i]->name == $custom_value[0]) {
+		if ($cat->name == $custom_value[0]) {
 			//echo "ENCONTREI-O!<br>";
-			//echo "ESCOLHIDO - >ID: " . $cats[$i]->cat_id . " Nome: ". $cats[$i]->name . "<br>";
-			$cat_id = $cats[$i]->term_id;
+			//echo "ESCOLHIDO - >ID: " . $cat->cat_id . " Nome: ". $cat->name . "<br>";
+			$cat_id = $cat->term_id;
 		}
 	}
 
