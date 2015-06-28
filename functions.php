@@ -14,7 +14,7 @@
 		wp_enqueue_script('navbar', get_template_directory_uri() . "/js/navbar.js");
 		wp_enqueue_script('flickity', get_template_directory_uri() . "/js/flickity-docs.min.js");
 		wp_enqueue_script('randomcores', get_template_directory_uri() . "/js/randomcores.js");
-		
+		wp_enqueue_script('scroll', get_template_directory_uri() . "/js/scroll.js");
 		
 	}
 
