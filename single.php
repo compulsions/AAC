@@ -3,18 +3,30 @@
 	get_header();
 	include 'navbar.php';
 	include 'slideshow.php';
-	//$pages = get_pages( );
+	$pages = get_pages( );
+	$cat = get_the_category();
+	$link_to_previous;
 
-	//for ($i=0; $i < sizeof($pages); $i++) { 
-		//echo "<p>" . $pages[$i]->guid . '</p>';
-	//}
+
+	for ($i=0; $i < sizeof($pages); $i++) { 
+		//echo "<p>" . get_the_title( $pages[$i]->ID ) . '</p>';
+
+		if ($cat[0]->name == get_the_title( $pages[$i]->ID )) {
+			//echo "encontrei o escolhido!!<br>";
+			//echo get_page_link($pages[$i]->ID);
+			$link_to_previous = get_page_link($pages[$i]->ID);
+		}
+	}
+
 ?>
 
 	<section>
 		<div class="container cor">
 			<div class="tituloPag">
-
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			
+				<a href="<?php echo $link_to_previous ?>">BACK</a>
+				<a href=""><?php echo $cat[0]->name; ?> > <?php the_title(); ?></a>
+				
 			</div>
 				<div class="col-md-3 info centrar">
 
@@ -34,10 +46,6 @@
 							
 
 								<p>
-								<?php 
-									//$pages = get_pages( ); 
-									//echo $pages[5]->guid;
-								?>
 								</p>
 								<p><?php the_content(); ?></p>
 
