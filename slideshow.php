@@ -14,10 +14,7 @@
 			</div>
 
 			<div class="col-md-4 procura">
-                <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				    <input type="text" placeholder="procura" autofocus />
-				    <button type="submit"> PROCURAR</button>
-                </form>
+                <?php get_search_form(); ?>
 			</div>
 		</div>
 	</section>
