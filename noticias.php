@@ -23,10 +23,9 @@
                 echo "tags: ";
                 if ($tags) {
                     foreach ($tags as $tag) {
-                        echo '<br><a href="' . get_tag_link ($tag->term_id) . '"> '. $tag->name . '</a>'; 
+                        echo '<li><a href="' . get_tag_link ($tag->term_id) . '"> '. $tag->name . '</a></li>'; 
                     }
                 }
- 
             ?>
         </div>
     </article>

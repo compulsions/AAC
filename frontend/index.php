@@ -106,7 +106,7 @@
 		    }
  		});
 */
- $(".noticia").each(function(){	
+ $(".container").each(function(){	
  		$(this).hide();
  		console.log("lel");
 		 });
@@ -114,7 +114,7 @@ $("#nav").slideUp();
       /* Every time the window is scrolled ... */
 $(window).scroll( function(){
 	/* Check the location of each desired element */
-    $('.noticia').each( function(i){
+    $('.container').each( function(i){
         var top_of_object = $(this).offset().top +400;
         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
 

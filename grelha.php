@@ -52,7 +52,7 @@
 	if (have_posts()) { ?>
 
 		<section>
-			<div class="container cor">
+			<div class="container carrega cor">
 				<div class="tituloPag"> <?php echo $custom_value[0] ?></div>
 				<div class="info  nucleos">	
 

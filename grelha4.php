@@ -15,11 +15,11 @@ Template Name: Emprego
 ?>
     
     <section class="container">
-        <div class="col-md-2 col-sm-2 col-xs-12 caixa_branca">
+        <div class="col-md-2 col-sm-2 col-xs-12 carrega caixa_branca">
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         </div>
         
-        <div class="col-md-9 col-sm-9 col-xs-12 caixa_branca">
+        <div class="col-md-9 col-sm-9 col-xs-12 carrega caixa_branca">
             <?php 
                 the_content('Mais informações..');
             ?>

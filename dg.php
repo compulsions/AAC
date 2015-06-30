@@ -10,7 +10,7 @@ Template Name: DG
 ?>
     
     <section class="container">
-        <div class="col-md-3 col-sm-3 col-xs-12 caixa_branca barralado">
+        <div class="col-md-3 col-sm-3 col-xs-12 caixa_branca barralado carrega">
             <ul>
                 <?php
                 query_posts('cat=14');

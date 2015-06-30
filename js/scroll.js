@@ -1,34 +1,50 @@
-  JQuery("#container").each(function(){
-  	JQuery(this).hide();
- 	 		JQuery(this).slideDown(1800);
+console.log("vamos começar");
 
-    });
- JQuery(".centrar").each(function(){
- 	if (JQuery(this).offset().top > JQuery(window).height()){	
- 			JQuery(this).hide();
- 		}else{
-	 		JQuery(this).slideDown(1800);
-	 	}
+jQuery(document).ready( function(){
 
+jQuery(".carrega").each(function(){	
+ 		jQuery(this).hide();
+ 		console.log("lel");
+		 });
+jQuery(".cenas").slideUp();
+    
     });
       /* Every time the window is scrolled ... */
-   JQuery(window).scroll( function(){
+jQuery(window).scroll( function(){
 	/* Check the location of each desired element */
-        JQuery('.blockR').each( function(i){
-        var top_of_object = JQuery(this).offset().top +400;
-        var bottom_of_object = JQuery(this).offset().top + JQuery(this).outerHeight();
+    jQuery('.carrega').each( function(i){
+        var top_of_object = jQuery(this).offset().top +400;
+        var bottom_of_object = jQuery(this).offset().top + jQuery(this).outerHeight();
 
-        var top_of_window = JQuery(window).scrollTop();
-        var bottom_of_window = JQuery(window).scrollTop() + JQuery(window).height();
+        var top_of_window = jQuery(window).scrollTop();
+        var bottom_of_window = jQuery(window).scrollTop() + jQuery(window).height();
         console.log( top_of_object);
         console.log( bottom_of_window);
 
         /* If the object is completely visible in the window, fade it in */
         if( bottom_of_window > top_of_object ){
-            JQuery(this).slideDown(1800);
+            jQuery(this).slideDown(1800);
+
+        }
+
+    }); 
+
+    jQuery('.cenas').each( function(i){
+        var top_of_object = jQuery(this).offset().top +200;
+        var bottom_of_object = jQuery(this).offset().top + jQuery(this).outerHeight();
+
+        var top_of_window = jQuery(window).scrollTop();
+        var bottom_of_window = jQuery(window).scrollTop() + jQuery(window).height();
+        console.log( top_of_object);
+        console.log( bottom_of_window);
+
+        /* If the object is completely visible in the window, fade it in */
+        if( bottom_of_window > top_of_object ){
+            jQuery(this).slideDown(500);
 
         }
 
     }); 
 
 });
+    

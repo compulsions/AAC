@@ -17,12 +17,12 @@ Template Name: Républicas
         </div>
     </section>
 
-    <section class="container centrar">
-        <div class="col-md-5 col-sm-5 col-xs-12 republica cor">
+    <section class="containercentrar">
+        <div class="col-md-5 col-sm-5 col-xs-12 republica carrega cor">
             one
         </div>
         
-         <div class="col-md-5 col-md-offset-2 col-sm-5 col-xs-12 republica cor">
+         <div class="col-md-5 col-md-offset-2 col-sm-5 col-xs-12 republica carrega cor">
             two
         </div>
 

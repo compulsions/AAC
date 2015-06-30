@@ -10,7 +10,7 @@ Template Name: texto 12
     include 'slideshow.php';
 ?>
     
-    <section class="container cor">
+    <section class="container carrega cor">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <h2><?php echo $titulo ?></h2>
             <?php 
