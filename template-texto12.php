@@ -1,6 +1,6 @@
 <?php
 /* 
-Template Name: texto 12
+Template Name: Texto 12
 */
     get_header();
 
