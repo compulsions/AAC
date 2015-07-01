@@ -13,7 +13,6 @@
 		wp_enqueue_script('jquery', get_template_directory_uri() . "/js/jquery-2.1.4.min.js");
 		wp_enqueue_script('navbar', get_template_directory_uri() . "/js/navbar.js");
 		wp_enqueue_script('flickity', get_template_directory_uri() . "/js/flickity-docs.min.js");
-		wp_enqueue_script('randomcores', get_template_directory_uri() . "/js/randomcores.js");
 		wp_enqueue_script('scroll', get_template_directory_uri() . "/js/scroll.js");
 		
 		wp_enqueue_script('maps-api', "https://maps.googleapis.com/maps/api/js");
