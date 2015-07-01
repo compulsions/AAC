@@ -26,7 +26,7 @@
  
     </nav>
 
-    <div class="noticias">
+    <div class="container noticias">
        <?php  
             $number_posts_per_page = 3;
 

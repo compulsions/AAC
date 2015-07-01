@@ -54,7 +54,7 @@
 		<section>
 			<div class="container carrega cor">
 				<div class="tituloPag"> <?php echo $custom_value[0] ?></div>
-				<div class="info  nucleos">	
+				<div class="info nucleos">	
 
 		<?php while (have_posts()) : the_post()?>
 
@@ -84,7 +84,7 @@
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
 							<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
-							<h2><?php echo $titulo; ?></h2>
+							<h4><?php echo $titulo; ?></h4>
 						</a>
 						
 						
@@ -102,7 +102,7 @@
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
 							<img  src=" <?php echo get_template_directory_uri() . '/img/notfound.png'; ?>" alt="secção desportiva">
-							<h2><?php echo $titulo; ?></h2>
+							<h4><?php echo $titulo; ?></h4>
 						</a>
 
 					</div>
