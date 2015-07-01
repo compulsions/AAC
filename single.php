@@ -7,14 +7,15 @@
 	$cat = get_the_category();
 	$link_to_previous;
 
+	//echo "categoria desta página: " . $cat[0]->name;
 
-	for ($i=0; $i < sizeof($pages); $i++) { 
+	foreach ($pages as $p) {
 		//echo "<p>" . get_the_title( $pages[$i]->ID ) . '</p>';
 
-		if ($cat[0]->name == get_the_title( $pages[$i]->ID )) {
+		if ($cat[0]->name == get_the_title( $p->ID )) {
 			//echo "encontrei o escolhido!!<br>";
 			//echo get_page_link($pages[$i]->ID);
-			$link_to_previous = get_page_link($pages[$i]->ID);
+			$link_to_previous = get_page_link($p->ID);
 		}
 	}
 
