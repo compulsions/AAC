@@ -4,7 +4,26 @@ Template Name: Emprego
 */
     get_header();
 
-    $cat_id = 15;
+    $cat_id;
+    $cats = get_categories( );
+
+    $custom_value = get_post_custom_values('categoria');
+    //echo "Custom value desta página: " . $custom_value[0] . "<br>";
+    //print_r($cats);
+
+    // ir ver a variável que a página passa
+    // comparar com os nomes das categorias
+    // só mostrar os posts dessa categoria
+
+    foreach ($cats as $cat) {
+        //echo "ID: " . $cat->term_id . " Nome: ". $cat->name . "<br>";
+
+        if ($cat->name == $custom_value[0]) {
+            //echo "ENCONTREI-O!<br>";
+            //echo "ESCOLHIDO - >ID: " . $cat->cat_id . " Nome: ". $cat->name . "<br>";
+            $cat_id = $cat->term_id;
+        }
+    }
 
     query_posts('cat=' . $cat_id);
 
