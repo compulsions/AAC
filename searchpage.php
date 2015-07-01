@@ -25,7 +25,7 @@ Template Name: Pesquisa
     
     <section class="container carrega cor">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <h2><?php echo $titulo ?></h2>
+            <h2> Pesquisa </h2>
 
             <?php 
         

@@ -13,8 +13,10 @@
 				<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=lc1a81t9selb2eq9mmagjsgppo%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Europe%2FLisbon" style=" border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
 			</div>
 
-			<div class="col-md-4 procura">
-                <?php get_search_form(); ?>
+			<div class="col-md-4 procura centrar">
+                <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+				    <input type="text" class="inputbox" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="procura" autofocus />
+				    <input type="submit" id="searchsubmit" class="button" value="Search" />
 			</div>
 		</div>
 	</section>
