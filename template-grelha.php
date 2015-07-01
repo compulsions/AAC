@@ -3,8 +3,6 @@
 	*/
 
 
-	$number_posts_per_page = 3;
-
 	$cat_id;
 	$cats = get_categories( );
 
@@ -26,21 +24,9 @@
 		}
 	}
 
-	// Se estiver na página de notícias, ele só mostra X artigos, e põe paginação (ver abaixo)
-	if ($pagename == 'noticias') {
-
-		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-		$args = array(
-		  'posts_per_page' => $number_posts_per_page,
-		  'paged' => $paged,
-		  'cat' => $cat_id
-		);
-
-		query_posts($args);
-	} else {
-		//Se estiver noutras páginas, mostra todas as páginas dessa categoria
-		query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
-	}
+	
+	//Mostra todas as páginas dessa categoria
+	query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 
 	get_header();
 	//echo "<small>(A Mostrar só algumas categorias)</small>";
@@ -121,14 +107,6 @@
 		</section>
 
 		<?php
-			// Zona para a paginação, caso esteja nas notícias
-			if ($pagename == 'noticias') { ?>
-		
-				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-
-		<?php
-			}
 
 	} else {
 		echo "<p>No content Found</p>";
