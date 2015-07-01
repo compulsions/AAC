@@ -16,6 +16,11 @@
 		wp_enqueue_script('randomcores', get_template_directory_uri() . "/js/randomcores.js");
 		wp_enqueue_script('scroll', get_template_directory_uri() . "/js/scroll.js");
 		
+		wp_enqueue_script('maps-api', "https://maps.googleapis.com/maps/api/js");
+		wp_enqueue_script('mapa', get_template_directory_uri() . "/js/mapa.js");
+
+		
+		
 	}
 
 	add_action('wp_enqueue_scripts', 'learningWordPress_resources');
