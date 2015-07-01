@@ -3,6 +3,8 @@
 	*/
 
 	$numRepublicas = 0;
+	$latRepublicas = [];
+	$longRepublicas = [];
 
 	$cat_id;
 	$cats = get_categories( );
@@ -85,6 +87,15 @@
 
 					<?php
 					the_content( );
+
+					// Vai buscar latitude da república, põe no array
+					$lat_temp =  get_post_custom_values('latitude');
+					array_push($latRepublicas, $lat_temp[0]);
+
+					// Vai buscar latitude da república, põe no array
+					$long_temp =  get_post_custom_values('longitude');
+					array_push($longRepublicas, $long_temp[0]);
+
 					?>
 
 					<div id="mapa<?php echo $numRepublicas; ?>" class="mapa">
@@ -111,4 +122,33 @@
 
 
 	get_footer();
+
+	print_r($latRepublicas);
+	print_r($longRepublicas);
 ?>
+
+<script>
+
+	var latitudes = [];
+	var longitudes = [];
+
+	<?php
+
+		foreach ($latRepublicas as $lats) {
+			?>
+
+			latitudes.push(<?php echo $lats ?>);
+			
+			<?php
+		}
+
+		foreach ($longRepublicas as $longs) {
+			?>
+			
+			longitudes.push(<?php echo $longs ?>);
+
+			<?php
+		}
+
+	?>
+</script>

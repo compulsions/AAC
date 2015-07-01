@@ -1,6 +1,6 @@
 function initialize() {
 
-	var lat =[40.2097584,
+	/*//var lat =[40.2097584,
 			40.1753593,
 			40.2072445,
 			40.2116507,
@@ -8,11 +8,10 @@ function initialize() {
 			40.209507,
 			40.2073823,
 			40.210019,
-
 			40.1753593,
 			40.1753593];
 
-	var lon = [-8.4266166,
+	//var lon = [-8.4266166,
 			-8.3895211,
 			-8.4216171,
 			-8.4115682,
@@ -22,7 +21,10 @@ function initialize() {
 			-8.4135044,
 
 			-8.4266166,
-			-8.4266166];
+			-8.4266166];*/
+
+	var lat = latitudes;
+	var lon = longitudes;
 
 for(var i =0; i<=8; i++){
 	var LatLng =new google.maps.LatLng(lat[i],lon[i]);
