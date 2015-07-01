@@ -19,7 +19,6 @@ a:focus{
   text-decoration: none;
 
 }
-
 .aac2 {
 	position: absolute;
 	opacity: 1;
@@ -109,7 +108,8 @@ a:focus{
 
 .botoes{
 	font-family: 'Roboto';
-	font-weight: 300;
+	font-weight: 700;
+    font-size: 15px;
     margin-left: 20px;
 }
 
@@ -301,9 +301,22 @@ body.modal-open1 {
 }
 
 .navbar-nav>li>a{
+	font-size: 13pt;
 	padding-bottom: 5px;
+
+	margin-right: 20px;
+	margin-left: 20px;
+
 	padding-left: 5px;
 	padding-right: 5px;
+
+	 margin-bottom: 10px;
+	
+}
+.navbar-nav>li>a:hover{
+	color:#1C1C1C;
+  border-bottom: solid 2px;
+  margin-bottom: 0px;
 	
 }
 
