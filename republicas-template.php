@@ -123,8 +123,6 @@
 
 	get_footer();
 
-	print_r($latRepublicas);
-	print_r($longRepublicas);
 ?>
 
 <script>
@@ -144,7 +142,7 @@
 
 		foreach ($longRepublicas as $longs) {
 			?>
-			
+
 			longitudes.push(<?php echo $longs ?>);
 
 			<?php
