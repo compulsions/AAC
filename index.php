@@ -45,7 +45,7 @@
         while (have_posts()) : the_post(); 
         ?>
         <div class="col-md-4 col-sm-4 col-xs-6 centrar">
-        <article class="noticia cor">
+        <article class="noticia carrega cor">
             <h2><a href="<?php the_permalink(); ?>"  class="radius button"><?php the_title(); ?></a></h2>
             <?php 
             if ( has_post_thumbnail() ) {
@@ -56,15 +56,14 @@
         <?php
             endwhile;
         ?>
+
+        <div class="botoes">
+
+            <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+            <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+
+        </div>
     </div>
-
-    <div class="botoes">
-
-        <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-        <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-
-    </div>
-
 <?php 
     wp_reset_query();
     get_footer();

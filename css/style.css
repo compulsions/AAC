@@ -108,7 +108,8 @@ a:focus{
 
 .botoes{
 	font-family: 'Roboto';
-	font-weight: 300;
+	font-weight: 700;
+    font-size: 15px;
     margin-left: 20px;
 }
 
