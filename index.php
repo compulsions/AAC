@@ -10,10 +10,8 @@
         
         
 		<div class="container titulo">
-			<a href="index.php"><img src="<?php echo get_template_directory_uri() . "/img/aac2.png"?>" alt="aac" class="aac2"> </a>
-            
-			<h1 class="cenas"> Associação Académica de Coimbra </h1> 
-				
+			<a href="index.php"><img src="<?php echo get_template_directory_uri() . "/img/aac2.png"?>" alt="aac" class="aac2"> </a>            
+			<h1 class="cenas"> Associação Académica de Coimbra </h1> 				
 		</div>
 	</div>
 
@@ -44,7 +42,7 @@
 
         while (have_posts()) : the_post(); 
         ?>
-        <div class="col-md-4 col-sm-4 col-xs-6 centrar">
+        <div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 centrar">
         <article class="noticia carrega cor">
             <h2><a href="<?php the_permalink(); ?>"  class="radius button"><?php the_title(); ?></a></h2>
             <?php 

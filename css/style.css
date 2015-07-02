@@ -322,7 +322,7 @@ body.modal-open1 {
 
 .noticia{
 	padding: 5px 5px;
-    margin: 30px 10px 10px 10px;
+    margin: 30px 10px 0px 0px;
 	font-size: 12pt;
     height: 330px;
 }
@@ -330,6 +330,8 @@ body.modal-open1 {
 .noticias{
 	font-size: 12pt;
     height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .noticia-block{
@@ -570,7 +572,6 @@ site-nav {
 .width{
  	width: 72.5%;
 }
-
 
 @media(min-width: 1200px){
 

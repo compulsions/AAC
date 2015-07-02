@@ -39,9 +39,9 @@
             }
         ?>
 
-		<?php//  if (is_page('academia/queima-das-fitas')) {
-		//	echo "<p>NUNCA MAIS É QUEIMAAAAAA</p>";
-		//}?>
+		<?php
+
+		?>
  
 		
 	</header>
