@@ -44,10 +44,12 @@
         ?>
         <div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 centrar">
         <article class="noticia carrega cor">
-            <h2><a href="<?php the_permalink(); ?>"  class="radius button"><?php the_title(); ?></a></h2>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <a href="<?php the_permalink(); ?>">
             <?php 
             if ( has_post_thumbnail() ) {
             echo get_the_post_thumbnail( $post->ID, 'medium' ); } ?>
+            </a>
         </article>
         </div>
             
