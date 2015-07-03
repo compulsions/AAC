@@ -53,6 +53,12 @@
 		<div class="container padding">
 
 		<?php while (have_posts()) : the_post()?>
+            
+        <?php $content = get_the_content('');
+            // conteudo a ser cortado, número de palavras que aparecem, texto de read more
+            $reduzido = wp_trim_words( $content, 25, '' ); ?>
+                       
+        
 
 			<div id="noticia<?php echo $numNoticias; ?>" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
 				<div class="noticia noticia-block cor">
@@ -69,7 +75,7 @@
 					<div class="img_noticia_ver">
 						<img src="<?php echo get_template_directory_uri() ?>/img/notfound.png" alt="noticia">
 					</div>
-					<?php the_content( ); ?>
+					<?php echo $reduzido ?>
 					<a class="lermais" href="<?php echo get_permalink( ); ?>"> Ler mais </a>
 				</a>
 
