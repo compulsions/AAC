@@ -6,7 +6,7 @@ jQuery(".carrega").each(function(){
  		jQuery(this).hide();
  		console.log("lel");
 		 });
-jQuery(".cor").slideUp();
+jQuery(".cenas").slideUp();
     
     });
       /* Every time the window is scrolled ... */
