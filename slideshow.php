@@ -14,9 +14,11 @@
 			</div>
 
 			<div class="col-md-4 procura centrar">
-                <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				    <input type="text" class="inputbox" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="procura" autofocus />
-				    <input type="submit" id="searchsubmit" class="button" value="Search" />
+                <form action="<?php echo home_url(); ?>" id="search-form" method="get">
+    <input type="text" name="s" id="s" value="type your search" onblur="if(this.value=='')this.value='type your search'"
+    onfocus="if(this.value=='type your search')this.value=''" />
+    <input type="button" value="submit" />
+                </form>
 			</div>
 		</div>
 	</section>
