@@ -26,26 +26,19 @@ Template Name: Pesquisa
     <section class="container carrega cor">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <h2> <?php printf( __( 'Resultados da pesquisa sobre: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?> </h2>
+            
+            <?php while ( have_posts() ) : the_post(); ?>
 
-            <?php 
-
-            while ( have_posts() ) : the_post();
-
-             get_template_part( 'content', 'search' );
-
+            <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+            
+            <?php
              endwhile;
 
-             else :
-
-                get_template_part( 'no-results', 'search' );
-
-        endif;
-        
-           // get_search_form();
-
-            //global $wp_query;
-            //$total_results = $wp_query->found_posts;
-            ?>
+             else : ?>
+            
+                <h3><?php echo "Não há resultados"; ?></h3>  
+            
+    <?php endif; ?>
             
             
         </div>
