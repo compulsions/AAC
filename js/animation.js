@@ -6,11 +6,11 @@ jQuery(".carrega").each(function(){
  		jQuery(this).hide();
  		console.log("lel");
 		 });
-jQuery(".cenas").slideUp();
+jQuery(".cor").slideUp();
     
     });
       /* Every time the window is scrolled ... */
-jQuery(window).scroll( function(){
+jQuery(document).ready( function(){
 	/* Check the location of each desired element */
     jQuery('.carrega').each( function(i){
         var top_of_object = jQuery(this).offset().top +400;
