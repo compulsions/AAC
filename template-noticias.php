@@ -19,12 +19,26 @@
 	}
 
 	// Paginação
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	$args = array(
-	  'posts_per_page' => $number_posts_per_page,
-	  'paged' => $paged,
-	  'cat' => $cat_id
-	);
+   if ( $custom_value != "") {
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+   	$args = array(
+   	  'posts_per_page' => $number_posts_per_page,
+   	  'paged' => $paged,
+   	  'cat' => $cat_id
+   	);
+
+      $title = get_the_title();
+   }
+   if ( $custom_value == "" && single_tag_title("", false) ) {
+      $tag_temp = single_tag_title("", false);
+   	$args = array(
+   	  'posts_per_page' => $number_posts_per_page,
+   	  'paged' => $paged,
+   	  'tag' => $tag_temp
+   	);
+
+      $title = "Mostrando notícias com a etiqueta: " . $tag_temp;
+   }
 
 	query_posts($args);
 
@@ -34,16 +48,9 @@
 	?>
 	<section>
 		<div id="noticias" class="container centrar cor">
-			<div class="tituloPag"> <?php echo get_the_title( ); ?></div>
+			<div class="tituloPag"> <?php echo $title ?></div>
         <ul class="tags_noticias">
-        <?php
-            if (have_posts()) : while (have_posts()) : the_post();
-                if( get_the_tag_list() ){
-                    echo $posttags = get_the_tag_list('<li>','</li><li>','</li>');
-                    }
-
-            endwhile; endif;
-        ?>
+        <?php wp_tag_cloud( 'smallest=10&largest=10' ); ?>
         </ul>
 		</div>
 		<br>
