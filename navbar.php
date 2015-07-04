@@ -1,6 +1,6 @@
 <!--............................  NAVBAR................................ -->
-	<nav id="navbar" class="navbar navbar-inverse">
-		<div class= "container-fluid">
+	<nav id="navbar">
+		<div class="container navbar navbar-inverse">
 	        <div class="navbar-header">
 	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-menu">
 	        	    <i class="fa fa-bars"></i>

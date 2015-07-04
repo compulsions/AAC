@@ -83,7 +83,7 @@
 					<div class="img_noticia_ver">
                   <?php // se tiver thumbnail, mostra, se não, mostra a cena da imagem não disponível ?>
                   <?php if ( has_post_thumbnail() ) { ?>
-                     <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'noticia' ));
+                     <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'noticia', 'class' => 'img-responsive' ));
                   }
 
                   else { ?>

@@ -48,7 +48,7 @@
             <a href="<?php the_permalink(); ?>">
             <?php 
             if ( has_post_thumbnail() ) {
-            echo get_the_post_thumbnail( $post->ID, 'medium' ); } ?>
+            echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'imagem noticia', 'class' => 'img-responsive' )) } ?>
             </a>
         </article>
         </div>
