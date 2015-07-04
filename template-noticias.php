@@ -2,15 +2,15 @@
 	Template Name: Notícias
 	*/
 
-    get_header();
+   get_header();
 
 	$numNoticias = 0;
-	$number_posts_per_page = 3;
+	$number_posts_per_page = 9;
 
 	$cat_id;
 	$cats = get_categories( );
 
-	$custom_value = get_post_custom_values('noticias');
+	$custom_value = get_post_custom_values('categoria');
 
 	foreach ($cats as $cat) {
 		if ($cat->name == $custom_value[0]) {
@@ -42,25 +42,23 @@
                     echo $posttags = get_the_tag_list('<li>','</li><li>','</li>');
                     }
 
-            endwhile; endif; 
-            wp_reset_query();
+            endwhile; endif;
         ?>
         </ul>
 		</div>
 		<br>
-	
+
 	<?php
 	if (have_posts()) { ?>
-		
+
 		<div class="container padding">
 
 		<?php while (have_posts()) : the_post()?>
-            
+
         <?php $content = get_the_content('');
             // conteudo a ser cortado, número de palavras que aparecem, texto de read more
             $reduzido = wp_trim_words( $content, 25, '' ); ?>
-                       
-        
+
 
 			<div id="noticia<?php echo $numNoticias; ?>" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
 				<div class="noticia noticia-block cor">
@@ -74,9 +72,18 @@
 					<div class="nomeNoticia">
 						<p><?php echo get_the_title( ); ?></p>
 					</div>
+
 					<div class="img_noticia_ver">
-						<img src="<?php echo get_template_directory_uri() ?>/img/notfound.png" alt="noticia">
-					</div>
+                  <?php // se tiver thumbnail, mostra, se não, mostra a cena da imagem não disponível ?>
+                  <?php if ( has_post_thumbnail() ) { ?>
+                     <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'noticia' ));
+                  }
+
+                  else { ?>
+						   <img src="<?php echo get_template_directory_uri() ?>/img/notfound.png" alt="noticia">
+					   <?php } ?>
+               </div>
+
 					<?php echo $reduzido ?>
 					<a class="lermais" href="<?php echo get_permalink( ); ?>"> Ler mais </a>
 				</a>
