@@ -1,8 +1,8 @@
 <!--............................  NAVBAR................................ -->
-	<nav id="navbar">
-		<div class= "container navbar navbar-inverse" role="navigation">
+	<nav id="navbar" class="navbar navbar-inverse">
+		<div class= "container-fluid">
 	        <div class="navbar-header">
-	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menu">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-menu">
 	        	    <i class="fa fa-bars"></i>
 	    	    </button>
 	        </div>
@@ -20,6 +20,8 @@
 	            </ul>
 	        </div>
 	    </div>
+        
+        
 	    <div id="academiaA" class= "container navbar cor">
 	        <div class="collapse navbar-collapse navbar-menu cor">
 	         	<ul class="nav navbar-nav navbar-center pontos">
