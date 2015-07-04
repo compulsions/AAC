@@ -60,8 +60,9 @@
 				</div>
         </div>
         
-		
-		<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y');?></p>
+		<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 centrar">
+		<p><br><?php bloginfo('name'); ?> - &copy; <?php echo date('Y');?></p>
+        </div>
 	
 	</footer>
 
