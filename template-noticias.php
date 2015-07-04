@@ -5,7 +5,7 @@
    get_header();
 
 	$numNoticias = 0;
-	$number_posts_per_page = 9;
+	$number_posts_per_page = 8;
 
 	$cat_id;
 	$cats = get_categories( );
@@ -93,6 +93,11 @@
 
 
 		<?php endwhile; ?>
+
+         <div class="botoes col-sm-12">
+             <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+             <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+         </div>
 
 		</div>
 
