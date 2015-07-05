@@ -103,15 +103,19 @@ a:focus{
 	color: white;
 	padding: 20px 40px;
     font-family: "Roboto";
-    font-size: 9pt;
+    font-size: 7pt;
     font-weight: 400;
+}
 
+.barra_preta p {
+    text-align: left;   
 }
 
 .barra_preta a {
 	background-color: #1C1C1C;
 	color: white;
     text-decoration: none;
+    text-align: left;
 }
 
 .botoes{
@@ -122,8 +126,13 @@ a:focus{
 }
 
 .botao_pesquisa {
-    color: white;
+    color: gray;
     background-color: black;
+}
+
+.barra_preta .titulo_site p {
+    font-weight: 700; 
+    text-align: center;
 }
 
 .branco{
@@ -467,13 +476,13 @@ p{
 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .patro2 {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .pw_70 {

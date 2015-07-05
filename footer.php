@@ -51,7 +51,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 centrar">
+				<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 centrar titulo_site">
 					<p><br><?php bloginfo('name'); ?> - &copy; <?php echo date('Y');?></p>
 		      </div>
 
