@@ -97,35 +97,42 @@
 
 			?>
 
-			<div class="container">
+			<div class="container padding">
+		      <div class="row">
 
-		      <div class="col-md-3 col-sm-3 col-xs-12 caixa_branca barralado carrega">
-		         <ul>
+		         <div class="col-sm-3 col-xs-12 barralado carrega">
+		            <div class="cor">
 
-		            <?php
-		            if (have_posts()) {
-		               while (have_posts()) : the_post(); ?>
 
-		                  <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+		            <ul>
+		               <?php
+		               if (have_posts()) {
+		                  while (have_posts()) : the_post(); ?>
 
-		               <?php endwhile;
-		            }
+		                     <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
 
-		            wp_reset_query();
-		            ?>
+		                  <?php endwhile;
+		               }
 
-		         </ul>
-		      </div>
+		               wp_reset_query();
+		               ?>
 
-		      <div class="col-md-8 col-sm-8 col-xs-12 caixa_branca">
+		            </ul>
+		            </div>
+		         </div>
 
-		         <?php
-		         if (have_posts()) {
-		            while (have_posts()) : the_post();
-		               the_content();
-		            endwhile;
-		         }
-		         ?>
+		         <div class="col-sm-9 col-xs-12 corpolado">
+		            <div class="cor">
+		               <?php
+		               if (have_posts()) {
+		                  while (have_posts()) : the_post();
+		                     the_content();
+		                  endwhile;
+		               }
+		               ?>
+		            </div>
+
+		         </div>
 
 		      </div>
 		   </div>
