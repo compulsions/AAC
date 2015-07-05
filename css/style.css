@@ -28,7 +28,7 @@ a:focus{
 
 	display: block;
 	margin-right: auto;
-	margin-left: auto;	
+	margin-left: auto;
 }
 
 .aac3 {
@@ -40,7 +40,7 @@ a:focus{
 
 	display: block;
 	margin-right: auto;
-	margin-left: auto;	
+	margin-left: auto;
 }
 
 .aac img {
@@ -58,7 +58,7 @@ a:focus{
 }
 
 .agenda{
-	height:200px; 
+	height:200px;
 	color:white;
 }
 
@@ -191,7 +191,7 @@ a:focus{
 	height:250px;
 	overflow: hidden;
 
-	margin:20px;	
+	margin:20px;
 }
 
 .homebranco{
@@ -298,6 +298,7 @@ body.modal-open1 {
   color:#1C1C1C;
   border-bottom: solid 2px;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 
 .navbar-nav>li>a{
@@ -311,13 +312,13 @@ body.modal-open1 {
 	padding-right: 5px;
 
 	 margin-bottom: 10px;
-	
+
 }
 .navbar-nav>li>a:hover{
 	color:#1C1C1C;
   border-bottom: solid 2px;
   margin-bottom: 0px;
-	
+
 }
 
 .noticia{
@@ -379,7 +380,7 @@ body.modal-open1 {
 
 .filtro_noticias_active{
 	color:white;
-	background-color: black;	
+	background-color: black;
 }
 
 .nucleos img{
@@ -434,7 +435,7 @@ p{
     -moz-filter: invert(1);
     -ms-filter: invert(1);
     -o-filter: invert(1);
-    
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -451,7 +452,7 @@ p{
 }
 
 .pw_100 {
-    width: 100%;   
+    width: 100%;
 }
 
 .procura{
@@ -463,7 +464,7 @@ p{
 
 .procura input{
 	width: 70%;
-	height:40px; 
+	height:40px;
 	border-style: solid;
 	border-size: 2px;
 	border-color: black;
@@ -472,7 +473,7 @@ p{
 
 .procura button{
 	width: 28%;
-	height:40px; 
+	height:40px;
 	color:white;
 	background-color: black;
 	border-style: solid;
@@ -489,7 +490,7 @@ section{
 }
 
 site-nav {
-    background-color: #fff;   
+    background-color: #fff;
 }
 
 .republica{
@@ -525,7 +526,7 @@ site-nav {
 .slides{
 	background-color: white;
 	width:100%;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .subtituloPag{
@@ -542,7 +543,7 @@ site-nav {
 
 	margin-top: 30px;
 	margin-bottom: 20px;
-	
+
 	margin-right: 20px;
 	margin-left: 20px;
 
@@ -558,13 +559,13 @@ site-nav {
 
 .tags_noticias li {
     color: gray;
-    display: inline; 
+    display: inline;
     padding: 0 5px;
     margin: 0 5px;
 }
 
 .titulo{
-	font-family: 'Roboto Slab'; 
+	font-family: 'Roboto Slab';
 	font-weight: 700;
 }
 
@@ -595,19 +596,19 @@ site-nav {
 	height: 95vh;
 	overflow: hidden;
 }
-    
+
 .cenas {
 	top:73%;
 	font-size:42pt;
 }
-    
+
 .slides{
 	background-color: white;
 	width:100%;
 	height:250px;
-	overflow: hidden;	
+	overflow: hidden;
 }
-    
+
 .republica-block{
 	margin-top: 20px;
 	width:100%;
@@ -644,7 +645,7 @@ site-nav {
 	line-height: 18px;
 
 	height: 350px;
-    }	
+    }
 }
 
 @media(max-width: 1024px){
@@ -653,7 +654,7 @@ site-nav {
     margin-top: 8px;
     font-size: 17pt;
 }
-    
+
 .cenas {
 	top:65%;
 	font-size:36pt;
@@ -679,7 +680,7 @@ site-nav {
 }
 .republica-block{
 	height: 420px;
-}	
+}
 }
 @media (max-width: 768px){
 .aac img{
@@ -688,13 +689,13 @@ site-nav {
     margin-right: auto;
     margin-left: auto;
 }
-    
+
 .aac .txt{
     margin-top: 10px;
     font-size: 15pt;
     text-align: center;
 }
-    
+
   .cenas{
 	top:50%;
 	font-size:30pt;
@@ -737,7 +738,7 @@ site-nav {
     }
 
     .aac .txt{
-        font-size: 13pt;	
+        font-size: 13pt;
     }
 
     .cenas {
@@ -759,18 +760,17 @@ site-nav {
 	.aac img{
 		width:20%;
 	}
-    
+
 	.aac .txt{
 		font-size: 10pt;
 	}
-    
+
 	.cenas{
 	top:28%;
 	font-size:13pt;
     }
-    
+
     .diminui{
         font-size: 11pt;
     }
 }
-
