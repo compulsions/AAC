@@ -108,7 +108,7 @@ a:focus{
 }
 
 .barra_preta p {
-    text-align: left;   
+    text-align: left;
 }
 
 .barra_preta a {
@@ -131,7 +131,7 @@ a:focus{
 }
 
 .barra_preta .titulo_site p {
-    font-weight: 700; 
+    font-weight: 700;
     text-align: center;
 }
 
@@ -210,6 +210,14 @@ a:focus{
 
 em {
    font-style: italic;
+}
+
+.emprego-row {
+   margin-bottom: 30px;
+}
+
+.emprego-row:last-child {
+   margin-bottom: 0;
 }
 
 .galeria{

@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
 Template Name: Emprego
 */
     get_header();
@@ -29,26 +29,36 @@ Template Name: Emprego
 
     include 'navbar.php';
     include 'slideshow.php';
-    
-    while (have_posts()) : the_post(); 
-?>
-    
-    <section class="container">
-        <div class="col-md-2 col-sm-2 col-xs-12 carrega caixa_branca">
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        </div>
-        
-        <div class="col-md-9 col-sm-9 col-xs-12 carrega caixa_branca">
-            <?php 
-                the_content('Mais informações..');
-            ?>
-        </div>
-    </section>
 
-<?php
-    endwhile;
+    if (have_posts()) { ?>
+      <section>
+         <div class="container padding">
+
+            <?php while (have_posts()) : the_post(); ?>
+
+               <div class="row emprego-row">
+                  <div class="col-sm-3 col-xs-12 carrega">
+                     <div class="cor">
+                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                     </div>
+                  </div>
+
+                  <div class="col-sm-9 col-xs-12 carrega">
+                     <div class="cor">
+                        <?php the_content('Mais informações..'); ?>
+                     </div>
+                  </div>
+               </div>
+
+            <?php endwhile; ?>
+
+         </div>
+      </section>
+
+   <?php }
+
+
     wp_reset_query();
 
     get_footer();
 ?>
-
