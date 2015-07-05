@@ -27,7 +27,7 @@
 		}
 	}
 
-	
+
 
 	get_header();
 	//echo "<small>(A Mostrar só algumas categorias)</small>";
@@ -39,29 +39,29 @@
 
 	// Mostrar conteúdo da página (introdução)
 	if (have_posts()) { ?>
-			
+
 		<section id="inicial">
-			<div class="container cor">
-				<div class="tituloPag"> <?php echo $custom_value[0] ?></div>
-				
-				<div class="container">
+			<div class="container">
+				<div class="row cor">
+					<div class="col-md-12 tituloPag"> <?php echo $custom_value[0] ?></div>
+
 					<div class="info col-md-12 diminui">
 
-		<?php
-
-		while (have_posts()) : the_post() ?>
-
 			<?php
-				$titulo = get_the_title();
 
-				the_content( ); 
-			?>
+			while (have_posts()) : the_post() ?>
 
-		<?php endwhile; ?>
+				<?php
+					$titulo = get_the_title();
+
+					the_content( );
+				?>
+
+			<?php endwhile; ?>
 
 					</div>
-				</div>
 
+				</div>
 			</div>
 		</section>
 
@@ -75,42 +75,47 @@
 	query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 
 	if (have_posts()) { ?>
+		<section>
 
-		<div class="container padding">
-		
-		<?php while (have_posts()) : the_post()?>
+			<div class="container">
+				<div class="row cor">
 
-			<div id="republica<?php echo $numRepublicas; ?>" class="col-md-6 col-sm-6 col-xs-12 col-xxs-12 blockR">
-				<div class="republica republica-block cor">
-					
-					<div class="subtituloPagM"><?php echo get_the_title(); ?></div>
+				<?php while (have_posts()) : the_post()?>
+
+					<div id="republica<?php echo $numRepublicas; ?>" class="col-sm-6">
+						<div class="republica republica-block cor">
+
+							<div class="subtituloPagM"><?php echo get_the_title(); ?></div>
+
+							<?php
+							the_content( );
+
+							// Vai buscar latitude da república, põe no array
+							$lat_temp =  get_post_custom_values('latitude');
+							array_push($latRepublicas, $lat_temp[0]);
+
+							// Vai buscar latitude da república, põe no array
+							$long_temp =  get_post_custom_values('longitude');
+							array_push($longRepublicas, $long_temp[0]);
+
+							?>
+
+							<div id="mapa<?php echo $numRepublicas; ?>" class="mapa">
+								<p><div id="mapa-<?php echo $numRepublicas ?>" style="height:150px;"></div></p>
+							</div>
+
+						</div>
+					</div>
 
 					<?php
-					the_content( );
+					$numRepublicas++;
 
-					// Vai buscar latitude da república, põe no array
-					$lat_temp =  get_post_custom_values('latitude');
-					array_push($latRepublicas, $lat_temp[0]);
-
-					// Vai buscar latitude da república, põe no array
-					$long_temp =  get_post_custom_values('longitude');
-					array_push($longRepublicas, $long_temp[0]);
-
-					?>
-
-					<div id="mapa<?php echo $numRepublicas; ?>" class="mapa">
-						<p><div id="mapa-<?php echo $numRepublicas ?>" style="height:150px;"></div></p>
-					</div>
+					endwhile; ?>
 
 				</div>
 			</div>
 
-			<?php 
-			$numRepublicas++;
-
-			endwhile; ?>
-
-		</div>
+		</section>
 
 		<?php
 
@@ -136,7 +141,7 @@
 			?>
 
 			latitudes.push(<?php echo $lats ?>);
-			
+
 			<?php
 		}
 
