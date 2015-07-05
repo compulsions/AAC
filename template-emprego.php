@@ -37,13 +37,13 @@ Template Name: Emprego
             <?php while (have_posts()) : the_post(); ?>
 
                <div class="row emprego-row">
-                  <div class="col-sm-3 col-xs-12 carrega">
+                  <div class="col-sm-3 col-xs-12 carrega cor n" >
                      <div class="cor">
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                      </div>
                   </div>
 
-                  <div class="col-sm-9 col-xs-12 carrega">
+                  <div class="col-sm-9 col-xs-12 carrega cor d">
                      <div class="cor">
                         <?php the_content('Mais informações..'); ?>
                      </div>

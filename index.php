@@ -42,7 +42,7 @@
 
         while (have_posts()) : the_post();
         ?>
-        <div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 centrar">
+        <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 centrar">
         <article class="noticia carrega cor">
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <a href="<?php the_permalink(); ?>">
