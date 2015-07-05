@@ -7,25 +7,25 @@
 		  <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/1.png"?>" alt="..." />
 		  <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/1.png"?>" alt="..."s />
 		</div>
-        
-        
+
+
 		<div class="container titulo">
-			<a href="index.php"><img src="<?php echo get_template_directory_uri() . "/img/aac2.png"?>" alt="aac" class="aac2"> </a>            
-			<h1 class="cenas"> Associação Académica de Coimbra </h1> 				
+			<a href="index.php"><img src="<?php echo get_template_directory_uri() . "/img/aac2.png"?>" alt="aac" class="aac2"> </a>
+			<h1 class="cenas"> Associação Académica de Coimbra </h1>
 		</div>
 	</div>
 
     <nav class="site-nav">
-					
+
         <?php
-			
+
 			include 'navbar.php';
         ?>
- 
+
     </nav>
 
     <div class="container noticias">
-       <?php  
+       <?php
             $number_posts_per_page = 3;
 
             $cats = get_categories();
@@ -40,19 +40,19 @@
 
 		query_posts($args);
 
-        while (have_posts()) : the_post(); 
+        while (have_posts()) : the_post();
         ?>
         <div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 centrar">
         <article class="noticia carrega cor">
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <a href="<?php the_permalink(); ?>">
-            <?php 
+            <?php
             if ( has_post_thumbnail() ) {
-            echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'imagem noticia', 'class' => 'img-responsive' )) } ?>
+            echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'imagem noticia', 'class' => 'img-responsive' )); } ?>
             </a>
         </article>
         </div>
-            
+
         <?php
             endwhile;
         ?>
@@ -64,7 +64,7 @@
 
         </div>
     </div>
-<?php 
+<?php
     wp_reset_query();
     get_footer();
 ?>
