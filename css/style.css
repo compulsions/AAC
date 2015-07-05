@@ -188,6 +188,7 @@ a:focus{
 
 .diminui{
 	font-size: 13pt;
+   text-align: left;
 }
 
 em {
@@ -490,7 +491,7 @@ p{
 }
 
 .procura input[type="text"] {
-    padding-left: 10px;   
+    padding-left: 10px;
 }
 
 section{
@@ -545,7 +546,7 @@ site-nav {
 	font-family: 'Roboto';
 	font-weight: 400;
 	font-size: 18pt;
-    margin: 20px;
+   margin: 20px;
 }
 
 .subtituloPagM{
@@ -562,18 +563,12 @@ site-nav {
 	line-height: 25px;
 }
 
-.tags_noticias ul {
+.tags_noticias {
     list-style: none;
     list-style-image: none;
     margin: 0;
     padding: 0;
-}
-
-.tags_noticias li {
-    color: gray;
-    display: inline;
-    padding: 0 5px;
-    margin: 0 5px;
+    padding-bottom: 20px;
 }
 
 .titulo{
@@ -585,7 +580,8 @@ site-nav {
 	font-family: 'Roboto';
 	font-weight: 700;
 	font-size: 26pt;
-	margin: 20px;
+   margin-top: 20px;
+   margin-bottom: 10px;
 }
 
 .tituloNot{

@@ -43,7 +43,7 @@
 		<section id="inicial">
 			<div class="container">
 				<div class="row cor">
-					<div class="col-md-12 tituloPag"> <?php echo $custom_value[0] ?></div>
+					<div class="col-md-12 tituloPag centrar"> <?php echo $custom_value[0] ?></div>
 
 					<div class="info col-md-12 diminui">
 
@@ -77,8 +77,8 @@
 	if (have_posts()) { ?>
 		<section>
 
-			<div class="container">
-				<div class="row cor">
+			<div class="container padding">
+				<div class="row">
 
 				<?php while (have_posts()) : the_post()?>
 
