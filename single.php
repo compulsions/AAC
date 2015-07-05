@@ -19,54 +19,122 @@
 		}
 	}
 
+	//echo "categoria deste post: " . $cat[0]->name;
+	//print_r($cat);
+
 ?>
 
 	<section>
-		<div class="container cor">
-			<div class="tituloPag">
-			
-				<a href="<?php echo $link_to_previous ?>">BACK</a>
-				<a href=""><?php echo $cat[0]->name; ?> > <?php the_title(); ?></a>
-				
+		<?php if ($cat[0]->name != 'Direção-Geral') { ?>
+
+			<div class="container cor">
+				<div class="tituloPag">
+
+					<a href="<?php echo $link_to_previous ?>">BACK</a>
+					<a href=""><?php echo $cat->name; ?> > <?php the_title(); ?></a>
+
+				</div>
+					<div class="col-md-3 info centrar">
+
+
+					<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));?>
+
+
+					</div>
+					<div class="col-md-8 borderesquerda noticia-cobaia">
+						<?php
+
+							if (have_posts()) :
+								while (have_posts()) : the_post();
+
+
+									?>
+
+
+									<p>
+									</p>
+									<p><?php the_content(); ?></p>
+
+									<?php
+
+								endwhile;
+
+								else :
+									echo '<p>No content found</p>';
+
+								endif;
+
+						?>
+
+					</div>
+
 			</div>
-				<div class="col-md-3 info centrar">
 
-				
-				<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));?>
+			<?php
+		} else {
+			// Se for da categoria da Direção Geral
+			$cat_id;
+		   $cats = get_categories( );
 
+		   $custom_value = $cat[0]->name;
+		   //echo "Custom value desta página: " . $custom_value[0] . "<br>";
+		   //print_r($cats);
 
-				</div>
-				<div class="col-md-8 borderesquerda noticia-cobaia">
-					<?php
+		   // ir ver a variável que a página passa
+		   // comparar com os nomes das categorias
+		   // só mostrar os posts dessa categoria
 
-						if (have_posts()) :
-							while (have_posts()) : the_post();
+		   foreach ($cats as $cat) {
+		   	//echo "ID: " . $cat->term_id . " Nome: ". $cat->name . "<br>";
 
-								
-								?>
-							
+		   	if ($cat->name == $custom_value) {
+		   		//echo "ENCONTREI-O!<br>";
+		         //echo "ESCOLHIDO - >ID: " . $cat->cat_id . " Nome: ". $cat->name . "<br>";
+		   		$cat_id = $cat->term_id;
+		   	}
+		   }
+			query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 
-								<p>
-								</p>
-								<p><?php the_content(); ?></p>
+			?>
 
-								<?php
-							
-							endwhile;
-							
-							else :
-								echo '<p>No content found</p>';
-							
-							endif;
+			<div class="container">
 
-					?>
-	
-				</div>
+		      <div class="col-md-3 col-sm-3 col-xs-12 caixa_branca barralado carrega">
+		         <ul>
 
-		</div>
+		            <?php
+		            if (have_posts()) {
+		               while (have_posts()) : the_post(); ?>
+
+		                  <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+
+		               <?php endwhile;
+		            }
+
+		            wp_reset_query();
+		            ?>
+
+		         </ul>
+		      </div>
+
+		      <div class="col-md-8 col-sm-8 col-xs-12 caixa_branca">
+
+		         <?php
+		         if (have_posts()) {
+		            while (have_posts()) : the_post();
+		               the_content();
+		            endwhile;
+		         }
+		         ?>
+
+		      </div>
+		   </div>
+
+		<?php
+		} ?>
 
 	</section>
-	
+
 	<?php
 	get_footer();
 

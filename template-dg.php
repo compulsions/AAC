@@ -33,36 +33,38 @@ Template Name: DG
    query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 ?>
 
-<section class="container">
+<section>
+   <div class="container">
 
-   <div class="col-md-3 col-sm-3 col-xs-12 caixa_branca barralado carrega">
-      <ul>
+      <div class="col-md-3 col-sm-3 col-xs-12 caixa_branca barralado carrega">
+         <ul>
+
+            <?php
+            if (have_posts()) {
+               while (have_posts()) : the_post(); ?>
+
+                  <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+
+               <?php endwhile;
+            }
+
+            wp_reset_query();
+            ?>
+
+         </ul>
+      </div>
+
+      <div class="col-md-8 col-sm-8 col-xs-12 caixa_branca">
 
          <?php
          if (have_posts()) {
-            while (have_posts()) : the_post(); ?>
-
-               <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
-
-            <?php endwhile;
+            while (have_posts()) : the_post();
+               the_content();
+            endwhile;
          }
-
-         wp_reset_query();
          ?>
 
-      </ul>
-   </div>
-
-   <div class="col-md-8 col-sm-8 col-xs-12 caixa_branca">
-
-      <?php
-      if (have_posts()) {
-         while (have_posts()) : the_post();
-            the_content();
-         endwhile;
-      }
-      ?>
-
+      </div>
    </div>
 
 </section>
