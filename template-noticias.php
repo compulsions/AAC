@@ -48,63 +48,74 @@
 	?>
 	<section>
 		<div id="noticias" class="container centrar cor">
-			<div class="tituloPag"> <?php echo $title ?></div>
-        <ul class="tags_noticias">
-        <?php wp_tag_cloud( 'smallest=10&largest=10' ); ?>
-        </ul>
+         <div class="row">
+
+
+		   <div class="col-sm-12 tituloPag"> <?php echo $title ?></div>
+         <div class="col-md-12">
+            <div class="tags_noticias">
+               <?php wp_tag_cloud( 'smallest=10&largest=10' ); ?>
+            </div>
+         </div>
+
+         </div>
 		</div>
 		<br>
+   </section>
 
 	<?php
 	if (have_posts()) { ?>
 
 		<div class="container padding">
+         <div class="row">
 
-		<?php while (have_posts()) : the_post()?>
+   		<?php while (have_posts()) : the_post()?>
 
-        <?php $content = get_the_content('');
-            // conteudo a ser cortado, número de palavras que aparecem, texto de read more
-            $reduzido = wp_trim_words( $content, 25, '' ); ?>
-
-
-			<div id="noticia<?php echo $numNoticias; ?>" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
-				<div class="noticia noticia-block cor">
-
-				<?php
-					// devia ter aqui um if para por uma classe se a foto for ao baixo ou ao alto
-					$numNoticias++;
-				?>
-
-				<a href="<?php echo get_permalink( ); ?>">
-					<div class="nomeNoticia">
-						<p><?php echo get_the_title( ); ?></p>
-					</div>
-
-					<div class="img_noticia_ver">
-                  <?php // se tiver thumbnail, mostra, se não, mostra a cena da imagem não disponível ?>
-                  <?php if ( has_post_thumbnail() ) { ?>
-                     <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'noticia', 'class' => 'img-responsive' ));
-                  }
-
-                  else { ?>
-						   <img src="<?php echo get_template_directory_uri() ?>/img/notfound.png" alt="noticia">
-					   <?php } ?>
-               </div>
-
-					<?php echo $reduzido ?>
-					<a class="lermais" href="<?php echo get_permalink( ); ?>"> Ler mais </a>
-				</a>
-
-				</div>
-			</div>
+           <?php $content = get_the_content('');
+               // conteudo a ser cortado, número de palavras que aparecem, texto de read more
+               $reduzido = wp_trim_words( $content, 25, '' ); ?>
 
 
-		<?php endwhile; ?>
+   			<div id="noticia<?php echo $numNoticias; ?>" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
+   				<div class="noticia noticia-block cor">
 
-         <div class="botoes col-sm-12">
-             <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-             <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-         </div>
+   				<?php
+   					// devia ter aqui um if para por uma classe se a foto for ao baixo ou ao alto
+   					$numNoticias++;
+   				?>
+
+   				<a href="<?php echo get_permalink( ); ?>">
+   					<div class="nomeNoticia">
+   						<p><?php echo get_the_title( ); ?></p>
+   					</div>
+
+   					<div class="img_noticia_ver">
+                     <?php // se tiver thumbnail, mostra, se não, mostra a cena da imagem não disponível ?>
+                     <?php if ( has_post_thumbnail() ) { ?>
+                        <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array( 'alt' => 'noticia', 'class' => 'img-responsive' ));
+                     }
+
+                     else { ?>
+   						   <img src="<?php echo get_template_directory_uri() ?>/img/notfound.png" alt="noticia">
+   					   <?php } ?>
+                  </div>
+
+   					<?php echo $reduzido ?>
+                  <br>
+   					<a class="lermais" href="<?php echo get_permalink( ); ?>"> Ler mais </a>
+   				</a>
+
+   				</div>
+   			</div>
+
+
+   		<?php endwhile; ?>
+            </div>
+
+            <div class="row">
+               <div class="alignleft col-sm-6"><?php next_posts_link( '< Older posts' ); ?></div>
+               <div class="alignright col-sm-6"><?php previous_posts_link( 'Newer posts >' ); ?></div>
+            </div>
 
 		</div>
 
@@ -114,8 +125,6 @@
 		echo "<p>No content Found</p>";
 	}
 	?>
-
-	</section>
 
 	<?php
 

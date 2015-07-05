@@ -62,6 +62,14 @@ a:focus{
 	color:white;
 }
 
+.alignleft {
+   text-align: left;
+}
+
+.alignright {
+   text-align: right;
+}
+
 .aumMargin{
 	margin-top: 15px;
 	margin-bottom: 15px;
