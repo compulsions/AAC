@@ -1,7 +1,7 @@
 <?php
 
 	function learningWordPress_resources() {
-		
+
 		wp_enqueue_style('bootstrap', get_template_directory_uri() . "/css/bootstrap.min.css");
 		wp_enqueue_style('font-awesome', get_template_directory_uri() . "/css/font-awesome.min.css");
 		wp_enqueue_style('flickity-docs', get_template_directory_uri() . "/css/flickity-docs-slide.css");
@@ -14,12 +14,13 @@
 		wp_enqueue_script('navbar', get_template_directory_uri() . "/js/navbar.js");
 		wp_enqueue_script('flickity', get_template_directory_uri() . "/js/flickity-docs.min.js");
 		wp_enqueue_script('animation', get_template_directory_uri() . "/js/animation.js");
-		
+
 		wp_enqueue_script('maps-api', "https://maps.googleapis.com/maps/api/js");
 		wp_enqueue_script('mapa', get_template_directory_uri() . "/js/mapa.js");
+		wp_enqueue_script('bootstrap-js', get_template_directory_uri() . "/js/bootstrap.min.js");
 
-		
-		
+
+
 	}
 
 	add_action('wp_enqueue_scripts', 'learningWordPress_resources');
