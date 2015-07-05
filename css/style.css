@@ -185,6 +185,10 @@ a:focus{
 	font-size: 13pt;
 }
 
+em {
+   font-style: italic;
+}
+
 .galeria{
 	background-color: white;
 	width:20%;
