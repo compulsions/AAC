@@ -113,6 +113,11 @@ a:focus{
     margin-left: 20px;
 }
 
+.botao_pesquisa {
+    color: white;
+    background-color: black;
+}
+
 .branco{
 	background-color: white;
 }
@@ -231,6 +236,17 @@ em {
 .info p{
 	 margin-right: 20px;
 	 margin-left: 20px;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    text-align: left;
 }
 
 .lermais{
@@ -460,29 +476,21 @@ p{
 }
 
 .procura{
-	margin-top: 10px;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin-bottom: 15px;
+	margin-top: 20px;
+    margin-bottom: 30px;
+	padding: 0;
 }
 
 .procura input{
-	width: 70%;
 	height:40px;
 	border-style: solid;
 	border-size: 2px;
 	border-color: black;
-    padding: 0 5px;
+    text-transform: uppercase;
 }
 
-.procura button{
-	width: 28%;
-	height:40px;
-	color:white;
-	background-color: black;
-	border-style: solid;
-	border-size: 2px;
-	border-color: black;
+.procura input[type="text"] {
+    padding-left: 10px;   
 }
 
 section{

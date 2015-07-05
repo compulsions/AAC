@@ -15,9 +15,13 @@
 
 			<div class="col-md-4 col-sm-6 col-xs-6 col-xs-12 procura centrar">
                 <form action="<?php echo home_url(); ?>" id="search-form" method="get">
-    <input type="text" name="s" id="s" value="type your search" onblur="if(this.value=='')this.value='type your search'"
-    onfocus="if(this.value=='type your search')this.value=''" />
-    <input type="button" value="submit" />
+                    <div class="col-md-8 col-sm-8 col-xs-12 col-xxs-12">
+                        <input type="text" name="s" id="s" value="Pesquisa" onblur="if(this.value=='')this.value='Pesquisa'"
+    onfocus="if(this.value=='Pesquisa')this.value=''" />
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 col-xxs-12">
+                        <input class ="botao_pesquisa" type="submit" value="Pesquisa" />
+                    </div>
                 </form>
 			</div>
 		</div>
