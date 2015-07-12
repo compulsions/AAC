@@ -225,6 +225,16 @@ em {
 	margin-right: 20px;
 	padding-bottom: 20px;
 }
+.footer-top {
+  margin-top: 10px;
+  
+
+}
+.centrar{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .emprego-row:last-child {
    margin-bottom: 0;
@@ -816,4 +826,9 @@ site-nav {
     .diminui{
         font-size: 11pt;
     }
+    .site-footer p{
+	
+    	font-size: 8pt;
+    	line-height: 10pt;
+	}
 }
