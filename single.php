@@ -30,8 +30,12 @@
 			<div class="container cor">
 				<div class="tituloPag">
 
-					<a href="<?php echo $link_to_previous ?>">BACK</a>
-					<a href=""><?php echo $cat->name; ?> > <?php the_title(); ?></a>
+				
+					<a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
+
+					<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
+					 < VOLTAR
+                    </a>
 
 				</div>
 					<div class="col-md-3 info centrar">

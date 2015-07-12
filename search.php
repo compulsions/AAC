@@ -30,6 +30,7 @@ Template Name: Pesquisa
             <?php while ( have_posts() ) : the_post(); ?>
 
             <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+             
             
             <?php
              endwhile;
@@ -37,7 +38,7 @@ Template Name: Pesquisa
              else : ?>
             
                 <h3><?php echo "Não há resultados"; ?></h3>  
-            
+           
     <?php endif; ?>
             
             

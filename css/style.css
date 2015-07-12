@@ -130,6 +130,26 @@ a:focus{
     background-color: black;
 }
 
+.botao_voltar {
+	font-size: 16pt;
+
+	float: right;
+	margin-right: 20px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	padding-right: 30px;
+	padding-left: 30px;
+
+    color: gray;
+    background-color: transparent;
+    border: 2px solid gray;
+}
+.botao_voltar:hover {
+	color: black;
+    border: 2px solid black;
+}
 .barra_preta .titulo_site p {
     font-weight: 700;
     text-align: center;
