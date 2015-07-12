@@ -54,7 +54,7 @@
 		   <div class="col-sm-12 tituloPag"> <?php echo $title ?></div>
          <div class="col-md-12">
             <div class="tags_noticias">
-               <?php wp_tag_cloud( 'smallest=10&largest=10' ); ?>
+               <?php wp_tag_cloud( 'smallest=12&largest=12' ); ?>
             </div>
          </div>
 
