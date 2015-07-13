@@ -34,7 +34,7 @@
 					<a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
 
 					<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
-					 < VOLTAR
+					 VOLTAR
                     </a>
 
 				</div>
