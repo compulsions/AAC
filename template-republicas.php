@@ -3,8 +3,8 @@
 	*/
 
 	$numRepublicas = 0;
-	$latRepublicas = [];
-	$longRepublicas = [];
+	$latRepublicas = array();
+	$longRepublicas = array();
 
 	$cat_id;
 	$cats = get_categories( );
