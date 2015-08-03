@@ -47,17 +47,17 @@
 
 					<div class="info col-md-12 diminui">
 
-			<?php
+					<?php
 
-			while (have_posts()) : the_post() ?>
+					while (have_posts()) : the_post() ?>
 
-				<?php
-					$titulo = get_the_title();
+						<?php
+							$titulo = get_the_title();
 
-					the_content( );
-				?>
+							the_content( );
+						?>
 
-			<?php endwhile; ?>
+					<?php endwhile; ?>
 
 					</div>
 
@@ -84,26 +84,28 @@
 
 					<div id="republica<?php echo $numRepublicas; ?>" class="col-sm-6">
 						<div class="republica republica-block cor">
+							<a href="<?php echo get_permalink(); ?>">
 
-							<div class="subtituloPagM"><?php echo get_the_title(); ?></div>
+								<div class="subtituloPagM"><?php echo get_the_title(); ?></div>
 
-							<?php
-							the_content( );
+								<?php
+								the_content( );
 
-							// Vai buscar latitude da república, põe no array
-							$lat_temp =  get_post_custom_values('latitude');
-							array_push($latRepublicas, $lat_temp[0]);
+								// Vai buscar latitude da república, põe no array
+								$lat_temp =  get_post_custom_values('latitude');
+								array_push($latRepublicas, $lat_temp[0]);
 
-							// Vai buscar latitude da república, põe no array
-							$long_temp =  get_post_custom_values('longitude');
-							array_push($longRepublicas, $long_temp[0]);
+								// Vai buscar latitude da república, põe no array
+								$long_temp =  get_post_custom_values('longitude');
+								array_push($longRepublicas, $long_temp[0]);
 
-							?>
+								?>
 
-							<div id="mapa<?php echo $numRepublicas; ?>" class="mapa">
-								<p><div id="mapa-<?php echo $numRepublicas ?>" style="height:150px;"></div></p>
-							</div>
+								<div id="mapa<?php echo $numRepublicas; ?>" class="mapa">
+									<p><div id="mapa-<?php echo $numRepublicas ?>" style="height:150px;"></div></p>
+								</div>
 
+							</a>
 						</div>
 					</div>
 
