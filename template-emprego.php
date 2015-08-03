@@ -32,7 +32,7 @@ Template Name: Emprego
 
     if (have_posts()) { ?>
       <section>
-         <div class="container padding">
+         <div class="container">
 
             <?php while (have_posts()) : the_post(); ?>
 
