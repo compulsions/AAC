@@ -8,18 +8,18 @@
 			  		<img class="slides" src="<?php echo get_template_directory_uri() ?>/img/capa3.jpg" alt="" />
 			  	</div>
 			</div>
-			<div id="agenda" class="col-md-4 col-sm-6 col-xs-6 col-xss-12 agenda">
+			<div id="agenda" class="col-md-4 col-sm-6 col-xs-12 agenda">
 
 				<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=lc1a81t9selb2eq9mmagjsgppo%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Europe%2FLisbon" style=" border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
 			</div>
 
-			<div class="col-md-4 col-sm-6 col-xs-6 col-xss-12 procura centrar">
+			<div class="col-md-4 col-sm-6 col-xs-12 procura centrar">
                 <form action="<?php echo home_url(); ?>" id="search-form" method="get">
-                    <div class="col-md-8 col-sm-8 col-xs-12 col-xxs-12">
+                    <div class="col-md-8 col-sm-12">
                         <input type="text" name="s" id="s" value="Pesquisa" onblur="if(this.value=='')this.value='Pesquisa'"
     onfocus="if(this.value=='Pesquisa')this.value=''" />
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 col-xxs-12">
+                    <div class="col-md-4 col-sm-12">
                         <input class ="botao_pesquisa" type="submit" value="Pesquisa" />
                     </div>
                 </form>
