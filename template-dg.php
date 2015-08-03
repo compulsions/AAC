@@ -60,8 +60,8 @@ Template Name: DG
             </div>
          </div>
 
-         <div class="col-sm-9 col-xs-12 corpolado">
-            <div class="cor">
+         <div class="col-sm-9 col-xs-12">
+            <div class="corpolado cor">
                <?php
                if (have_posts()) {
                   while (have_posts()) : the_post();

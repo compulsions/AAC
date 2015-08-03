@@ -39,7 +39,7 @@
 							<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
 							 VOLTAR
 		                    </a>
-						</div>			
+						</div>
 					</div>
 
 				</div>
@@ -127,17 +127,16 @@
 		            </div>
 		         </div>
 
-		         <div class="col-sm-9 col-xs-12 corpolado">
-		            <div class="cor">
-		               <?php
-		               if (have_posts()) {
-		                  while (have_posts()) : the_post();
-		                     the_content();
-		                  endwhile;
-		               }
-		               ?>
-		            </div>
-
+		         <div class="col-sm-9 col-xs-12">
+					 <div class="corpolado cor">
+						<?php
+							if (have_posts()) {
+								while (have_posts()) : the_post();
+									the_content();
+								endwhile;
+							}
+						?>
+					</div>
 		         </div>
 
 		      </div>

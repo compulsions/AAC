@@ -86,6 +86,10 @@ a:focus{
 	margin-bottom: 20px;
 }
 
+.barralado ul {
+    padding: 15px;
+}
+
 .barralado li{
     list-style: none;
     color: gray;
@@ -200,6 +204,11 @@ a:focus{
 	color: white;
 }
 
+.corpolado {
+    min-height: 536px;
+    padding: 10px;
+}
+
 .contact-button {
   position: relative;
   background:#34495e;
@@ -247,7 +256,7 @@ em {
 }
 .footer-top {
   margin-top: 10px;
-  
+
 
 }
 .centrar{
@@ -856,7 +865,7 @@ site-nav {
         font-size: 11pt;
     }
     .site-footer p{
-	
+
     	font-size: 8pt;
     	line-height: 10pt;
 	}
