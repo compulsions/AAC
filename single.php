@@ -30,12 +30,17 @@
 			<div class="container cor">
 				<div class="tituloPag">
 
-				
-					<a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
+					<div class="row">
+						<div class="col-sm-12">
+							<a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
+						</div>
 
-					<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
-					 VOLTAR
-                    </a>
+						<div class="col-sm-12">
+							<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
+							 VOLTAR
+		                    </a>
+						</div>			
+					</div>
 
 				</div>
 					<div class="col-md-3 info centrar">
@@ -50,14 +55,11 @@
 
 							if (have_posts()) :
 								while (have_posts()) : the_post();
-
-
 									?>
 
-
 									<p>
+										<?php the_content(); ?>
 									</p>
-									<p><?php the_content(); ?></p>
 
 									<?php
 
