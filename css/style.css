@@ -23,6 +23,11 @@ a:focus{
   text-decoration: none;
 
 }
+	.button_fb:hover{
+     		color:gray;
+     		cursor: pointer;
+
+     	}
 .aac2 {
 	position: absolute;
 	opacity: 1;

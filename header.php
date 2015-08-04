@@ -12,7 +12,6 @@
 
     <link href="img/favicon.png" rel="shortcut icon">
     
-    
    
 </head>
 <body <?php body_class(); ?>>

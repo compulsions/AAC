@@ -1,3 +1,6 @@
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   
 <?php
 
 	get_header();
@@ -40,14 +43,38 @@
 							 VOLTAR
 		                    </a>
 						</div>
+
 					</div>
 
 				</div>
 					<div class="col-md-3 info centrar">
 
 
-					<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));?>
+					<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
+					?>
 
+					<div class="button_fb" id="share_button" >
+						<i class="fa fa-facebook-official"></i> Partilhar
+						</div>
+				
+
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+								$('#share_button').click(function(e){
+									e.preventDefault();
+									FB.ui({
+										method: 'feed',
+										name: '', // título
+										link: 'http://localhost/wordpress/index.php/2015/06/26/aac-convida-personalidades-para-debates-sobre-educacao/',//por link de onde vem a noticia
+										picture: 'http://www.academica.pt/wp-content/uploads/2012/10/aac1.png', 
+										description: 'kdjfakjfkajd',
+										caption: '',
+										message: ''
+									});
+								});
+							});
+						</script>
 
 					</div>
 					<div class="col-md-8 borderesquerda noticia-cobaia">
@@ -146,6 +173,22 @@
 		} ?>
 
 	</section>
+
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+	FB.init({appId: '1483877931904022',
+	 status: true,
+	 cookie: true,
+	 xfbml: true});
+	};
+	(function() {
+		var e = document.createElement('script'); e.async = true;
+		e.src = document.location.protocol +
+		'//connect.facebook.net/pt_PT/all.js';
+		document.getElementById('fb-root').appendChild(e);
+	}());
+</script>
 
 	<?php
 	get_footer();
