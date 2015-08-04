@@ -1,6 +1,5 @@
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   
+
+
 <?php
 
 	get_header();
@@ -28,7 +27,15 @@
 ?>
 
 	<section>
-		<?php if ($cat[0]->name != 'Direção-Geral') { ?>
+		<?php if ($cat[0]->name != 'Direção-Geral') {
+
+            // Se for notícias, põe já o jquery e o fontawesome
+            //if ($cat]0]->name == 'Notícias') { ?>
+
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+            <?php// } ?>
 
 			<div class="container cor">
 				<div class="tituloPag">
@@ -50,53 +57,51 @@
 					<div class="col-md-3 info centrar">
 
 
-					<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
+					<?php
+                        echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
+
+                        // Nota: o início do loop não devia estar aqui, mas como é a página single, e ele vai ter sempre obrigatoriamente só um post
+                        // abre-se aqui para conseguir por o link e descição no btn de partilhar
+
+                        if (have_posts()) :
+                            while (have_posts()) : the_post();
 					?>
 
-					<div class="button_fb" id="share_button" >
-						<i class="fa fa-facebook-official"></i> Partilhar
-						</div>
-				
+            					<div class="button_fb" id="share_button" >
+            						<i class="fa fa-facebook-official"></i> Partilhar
+            					</div>
 
-						
-						<script type="text/javascript">
-							$(document).ready(function(){
-								$('#share_button').click(function(e){
-									e.preventDefault();
-									FB.ui({
-										method: 'feed',
-										name: '', // título
-										link: 'http://localhost/wordpress/index.php/2015/06/26/aac-convida-personalidades-para-debates-sobre-educacao/',//por link de onde vem a noticia
-										picture: 'http://www.academica.pt/wp-content/uploads/2012/10/aac1.png', 
-										description: 'kdjfakjfkajd',
-										caption: '',
-										message: ''
-									});
-								});
-							});
-						</script>
+        						<script type="text/javascript">
+        							$(document).ready(function(){
+        								$('#share_button').click(function(e){
+        									e.preventDefault();
+        									FB.ui({
+        										method: 'feed',
+        										name: '', // título
+        										link: '<?php echo get_permalink() ?>',//por link de onde vem a noticia
+        										picture: 'http://www.academica.pt/wp-content/uploads/2012/10/aac1.png',
+        										description: 'kdjfakjfkajd',
+        										caption: '',
+        										message: ''
+        									});
+        								});
+        							});
+        						</script>
 
 					</div>
 					<div class="col-md-8 borderesquerda noticia-cobaia">
+						<p>
+							<?php the_content(); ?>
+						</p>
+
 						<?php
 
-							if (have_posts()) :
-								while (have_posts()) : the_post();
-									?>
+							endwhile;
 
-									<p>
-										<?php the_content(); ?>
-									</p>
+							else :
+								echo '<p>No content found</p>';
 
-									<?php
-
-								endwhile;
-
-								else :
-									echo '<p>No content found</p>';
-
-								endif;
-
+						endif;
 						?>
 
 					</div>
