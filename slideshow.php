@@ -9,12 +9,57 @@
 			  	</div>
 			</div>
 			<div id="agenda" class="col-md-4 agenda">
-				
+
+				<?php
+
+					$cat_id;
+					$cats = get_categories( );
+
+					$custom_value = get_post_custom_values('categoria');
+					//echo "Custom value desta página: " . $custom_value[0] . "<br>";
+					//print_r($cats);
+
+					// ir ver a variável que a página passa
+					// comparar com os nomes das categorias
+					// só mostrar os posts dessa categoria
+
+					foreach ($cats as $cat) {
+					//echo "ID: " . $cat->term_id . " Nome: ". $cat->name . "<br>";
+
+						if ($cat->name == 'Eventos') {
+							//echo "ENCONTREI-O!<br>";
+							//echo "ESCOLHIDO - >ID: " . $cat->cat_id . " Nome: ". $cat->name . "<br>";
+
+							// <div class="col-sm-3 col-xs-12 caixa_branca barralado carrega">
+							$cat_id = $cat->term_id;
+						}
+					}
+
+					//Mostra todas as páginas dessa categoria
+					query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
+
+				?>
+
+					<!--
+					<p> 11 FEV | Merdasd asd as d </p>
+					<p> 11 FEV | Merdasd asd as d </p>
+					<p> 11 FEV | Merdasd asd as d </p> -->
+
 					<h3> Eventos Próximos </h3>
-					<p> 11 FEV | Merdasd asd as d </p>
-					<p> 11 FEV | Merdasd asd as d </p>
-					<p> 11 FEV | Merdasd asd as d </p>
-					
+					<ol>
+						<?php
+		                if (have_posts()) {
+		                   while (have_posts()) : the_post(); ?>
+
+		                      <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+
+		                   <?php endwhile;
+		                }
+
+		                wp_reset_query();
+		                ?>
+					</ol>
+
 
 				<!-- <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=lc1a81t9selb2eq9mmagjsgppo%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Europe%2FLisbon" style=" border-width:0 " width="100%" height="100%" frameborder="0" scrolling="no"></iframe> -->
 			</div>
