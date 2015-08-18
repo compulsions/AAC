@@ -34,24 +34,21 @@
 							$cat_id = $cat->term_id;
 						}
 					}
-
-					//Mostra todas as páginas dessa categoria
-					query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
+					query_posts(array('cat' =>$cat_id, 'posts_per_page' => 4, 'order' => 'ASC', 'orderby' => 'meta_value', 'meta_key' => 'data_evento'));
 
 				?>
-
-					<!--
-					<p> 11 FEV | Merdasd asd as d </p>
-					<p> 11 FEV | Merdasd asd as d </p>
-					<p> 11 FEV | Merdasd asd as d </p> -->
-
 					<h3> Eventos Próximos </h3>
 					<ol>
 						<?php
 		                if (have_posts()) {
-		                   while (have_posts()) : the_post(); ?>
+		                   while (have_posts()) : the_post();
+						   		$link = get_post_custom_values('link_evento');
+								if ($link[0] == "") {
+									$link[0] = "#";
+								}
+						   ?>
 
-		                      <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+		                      <li><a href="<?php echo $link[0] ?>"><?php echo get_the_title(); ?></a></li>
 
 		                   <?php endwhile;
 		                }
