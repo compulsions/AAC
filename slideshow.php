@@ -34,8 +34,8 @@
 							$cat_id = $cat->term_id;
 						}
 					}
-					query_posts(array('cat' =>$cat_id, 'posts_per_page' => 4, 'order' => 'ASC', 'orderby' => 'meta_value', 'meta_key' => 'data_evento'));
 
+					query_posts(array('cat' =>$cat_id, 'posts_per_page' => 3, 'order' => 'asc', 'orderby' => 'meta_value', 'meta_key' => 'data_evento', 'meta_compare' => '>=', 'meta_value' => current_time("Ymd"), 'meta_type' => 'NUMERIC' ));
 				?>
 					<h3> Eventos Próximos </h3>
 					<ol>
@@ -46,6 +46,8 @@
 								if ($link[0] == "") {
 									$link[0] = "#";
 								}
+
+								$date = get_post_custom_values('data_evento');
 						   ?>
 
 		                      <li><a href="<?php echo $link[0] ?>"><?php echo get_the_title(); ?></a></li>
