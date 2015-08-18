@@ -46,8 +46,6 @@
 								if ($link[0] == "") {
 									$link[0] = "#";
 								}
-
-								$date = get_post_custom_values('data_evento');
 						   ?>
 
 		                      <li><a href="<?php echo $link[0] ?>"><?php echo get_the_title(); ?></a></li>
