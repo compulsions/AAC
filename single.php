@@ -65,28 +65,16 @@
 
                         if (have_posts()) :
                             while (have_posts()) : the_post();
+
+							$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+							$content = get_the_content('');
+							$content = wp_trim_words( $content, 25, '' );
 					?>
 
             					<div class="button_fb" id="share_button" >
-            						<i class="fa fa-facebook-official"></i> Partilhar
+            						<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnovo.academica.pt/campeonato-de-judo-2015/%2F&__mref=message
+"><i class="fa fa-facebook-official"></i> Partilhar </a>
             					</div>
-
-        						<script type="text/javascript">
-        							$(document).ready(function(){
-        								$('#share_button').click(function(e){
-        									e.preventDefault();
-        									FB.ui({
-        										method: 'feed',
-        										name: '', // título
-        										link: '<?php echo get_permalink() ?>',//por link de onde vem a noticia
-        										picture: 'http://www.academica.pt/wp-content/uploads/2012/10/aac1.png',
-        										description: 'kdjfakjfkajd',
-        										caption: '',
-        										message: ''
-        									});
-        								});
-        							});
-        						</script>
 
 					</div>
 					<div class="col-md-8 borderesquerda noticia-cobaia">
