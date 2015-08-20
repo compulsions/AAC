@@ -69,11 +69,13 @@
 							$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
 							$content = get_the_content('');
 							$content = wp_trim_words( $content, 25, '' );
+							$link = get_permalink();
+							//$link = str_replace('//', 'p%3A%2F%2F', $link);
+							$link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
 					?>
 
             					<div class="button_fb" id="share_button" >
-            						<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnovo.academica.pt/campeonato-de-judo-2015/%2F&__mref=message
-"><i class="fa fa-facebook-official"></i> Partilhar </a>
+            						<a href="<?php echo $link; ?>"><i class="fa fa-facebook-official"></i> Partilhar </a>
             					</div>
 
 					</div>
