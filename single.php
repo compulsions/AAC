@@ -75,7 +75,7 @@
 					?>
 
             					<div class="button_fb" id="share_button" >
-            						<a href="<?php echo $link; ?>"><i class="fa fa-facebook-official"></i> Partilhar </a>
+            						<a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-facebook-official"></i> Partilhar </a>
             					</div>
 
 					</div>
