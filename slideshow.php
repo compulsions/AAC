@@ -35,13 +35,15 @@
 						}
 					}
 
-					query_posts(array('cat' =>$cat_id, 'posts_per_page' => 3, 'order' => 'asc', 'orderby' => 'meta_value', 'meta_key' => 'data_evento', 'meta_compare' => '>=', 'meta_value' => current_time("Ymd"), 'meta_type' => 'NUMERIC' ));
+					$args = array('cat' =>$cat_id, 'posts_per_page' => 3, 'order' => 'asc', 'orderby' => 'meta_value', 'meta_key' => 'data_evento', 'meta_compare' => '>=', 'meta_value' => current_time("Ymd"), 'meta_type' => 'NUMERIC' );
+					$query_eventos = new WP_Query( $args );
+					//query_posts();
 				?>
 					<h3> Eventos Próximos </h3>
 					<ol>
 						<?php
-		                if (have_posts()) {
-		                   while (have_posts()) : the_post();
+		                if ($query_eventos->have_posts()) {
+		                   while ($query_eventos->have_posts()) : $query_eventos->the_post();
 						   		$link = get_post_custom_values('link_evento');
 								if ($link[0] == "") {
 									$link[0] = "#";
@@ -52,8 +54,7 @@
 
 		                   <?php endwhile;
 		                }
-
-		                wp_reset_query();
+						wp_reset_postdata();
 		                ?>
 					</ol>
 
