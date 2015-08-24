@@ -73,7 +73,7 @@
 			</div>
 			<div id="noticia2" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
 				<div class="noticia noticia-block cor">
-				<a href="noticia.html?id=noticia2 ">
+					<a href="noticia.html?id=noticia2 ">
 					<div class="nomeNoticia">
 						<p> NENA VAI TORNAR-SE PRESIDENTE!!!</p>
 					</div>
