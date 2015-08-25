@@ -27,145 +27,207 @@
 ?>
 
 	<section>
-		<?php if ($cat[0]->name != 'Direção-Geral') {
+		<?php
 
-            // Se for notícias, põe já o jquery e o fontawesome
-            //if ($cat]0]->name == 'Notícias') { ?>
+		switch ($cat[0]->name) {
+			case 'Direção-Geral':
+					// Se for da categoria da Direção Geral
+					$cat_id;
+				   $cats = get_categories( );
 
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+				   $custom_value = $cat[0]->name;
+				   //echo "Custom value desta página: " . $custom_value[0] . "<br>";
+				   //print_r($cats);
 
-            <?php// } ?>
+				   // ir ver a variável que a página passa
+				   // comparar com os nomes das categorias
+				   // só mostrar os posts dessa categoria
 
-			<div class="container cor">
-				<div class="tituloPag">
+				   foreach ($cats as $cat) {
+					//echo "ID: " . $cat->term_id . " Nome: ". $cat->name . "<br>";
 
-					<div class="row">
-						<div class="col-sm-12">
-							<a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
-						</div>
+					if ($cat->name == $custom_value) {
+						//echo "ENCONTREI-O!<br>";
+						 //echo "ESCOLHIDO - >ID: " . $cat->cat_id . " Nome: ". $cat->name . "<br>";
+						$cat_id = $cat->term_id;
+					}
+				   }
+					query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 
-						<div class="col-sm-12">
-							<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
-							 VOLTAR
-		                    </a>
-						</div>
-
-					</div>
-
-				</div>
-					<div class="col-md-3 info centrar">
-
-
-					<?php
-                        echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
-
-                        // Nota: o início do loop não devia estar aqui, mas como é a página single, e ele vai ter sempre obrigatoriamente só um post
-                        // abre-se aqui para conseguir por o link e descição no btn de partilhar
-
-                        if (have_posts()) :
-                            while (have_posts()) : the_post();
-
-							$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-							$content = get_the_content('');
-							$content = wp_trim_words( $content, 25, '' );
-							$link = get_permalink();
-							//$link = str_replace('//', 'p%3A%2F%2F', $link);
-							$link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
 					?>
 
-            					<div class="button_fb" id="share_button" >
-            						<a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-facebook-official"></i> Partilhar </a>
-            					</div>
+					<div class="container padding">
+					  <div class="row">
+
+						 <div class="col-sm-3 col-xs-12 barralado carrega">
+							<div class="cor">
+
+
+							<ul>
+							   <?php
+							   if (have_posts()) {
+								  while (have_posts()) : the_post(); ?>
+
+									 <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+
+								  <?php endwhile;
+							   }
+
+							   wp_reset_query();
+							   ?>
+
+							</ul>
+							</div>
+						 </div>
+
+						 <div class="col-sm-9 col-xs-12">
+							 <div class="corpolado cor">
+								<?php
+									if (have_posts()) {
+										while (have_posts()) : the_post();
+											the_content();
+										endwhile;
+									}
+								?>
+							</div>
+						 </div>
+
+					  </div>
+				   </div>
+			   <?php
+				break;
+
+			case 'Notícias':
+
+				// Se for notícias, põe já o jquery e o fontawesome
+				//if ($cat]0]->name == 'Notícias') { ?>
+
+					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+				<?php// } ?>
+
+				<div class="container cor">
+					<div class="tituloPag">
+
+						<div class="row">
+							<div class="col-sm-12">
+								<a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
+							</div>
+
+							<div class="col-sm-12">
+								<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
+								 VOLTAR
+								</a>
+							</div>
+
+						</div>
 
 					</div>
-					<div class="col-md-8 borderesquerda noticia-cobaia">
-						<p>
-							<?php the_content(); ?>
-						</p>
+						<div class="col-md-3 info centrar">
+
 
 						<?php
+							echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
 
-							endwhile;
+							// Nota: o início do loop não devia estar aqui, mas como é a página single, e ele vai ter sempre obrigatoriamente só um post
+							// abre-se aqui para conseguir por o link e descição no btn de partilhar
 
-							else :
-								echo '<p>No content found</p>';
-
-						endif;
-						?>
-
-					</div>
-
-			</div>
-
-			<?php
-		} else {
-			// Se for da categoria da Direção Geral
-			$cat_id;
-		   $cats = get_categories( );
-
-		   $custom_value = $cat[0]->name;
-		   //echo "Custom value desta página: " . $custom_value[0] . "<br>";
-		   //print_r($cats);
-
-		   // ir ver a variável que a página passa
-		   // comparar com os nomes das categorias
-		   // só mostrar os posts dessa categoria
-
-		   foreach ($cats as $cat) {
-		   	//echo "ID: " . $cat->term_id . " Nome: ". $cat->name . "<br>";
-
-		   	if ($cat->name == $custom_value) {
-		   		//echo "ENCONTREI-O!<br>";
-		         //echo "ESCOLHIDO - >ID: " . $cat->cat_id . " Nome: ". $cat->name . "<br>";
-		   		$cat_id = $cat->term_id;
-		   	}
-		   }
-			query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
-
-			?>
-
-			<div class="container padding">
-		      <div class="row">
-
-		         <div class="col-sm-3 col-xs-12 barralado carrega">
-		            <div class="cor">
-
-
-		            <ul>
-		               <?php
-		               if (have_posts()) {
-		                  while (have_posts()) : the_post(); ?>
-
-		                     <li><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
-
-		                  <?php endwhile;
-		               }
-
-		               wp_reset_query();
-		               ?>
-
-		            </ul>
-		            </div>
-		         </div>
-
-		         <div class="col-sm-9 col-xs-12">
-					 <div class="corpolado cor">
-						<?php
-							if (have_posts()) {
+							if (have_posts()) :
 								while (have_posts()) : the_post();
-									the_content();
-								endwhile;
-							}
+
+								$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+								$content = get_the_content('');
+								$content = wp_trim_words( $content, 25, '' );
+								$link = get_permalink();
+								//$link = str_replace('//', 'p%3A%2F%2F', $link);
+								$link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
 						?>
+
+									<div class="button_fb" id="share_button" >
+										<a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-facebook-official"></i> Partilhar </a>
+									</div>
+
+						</div>
+						<div class="col-md-8 borderesquerda noticia-cobaia">
+							<p>
+								<?php the_content(); ?>
+							</p>
+
+							<?php
+
+								endwhile;
+
+								else :
+									echo '<p>No content found</p>';
+
+							endif;
+							?>
+
+						</div>
+
+				</div>
+
+				<?php
+				break;
+
+			default:
+				// Se for notícias, põe já o jquery e o fontawesome
+				//if ($cat]0]->name == 'Notícias') { ?>
+
+					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+				<?php// } ?>
+
+				<div class="container cor">
+					<div class="tituloPag">
+
+						<div class="row">
+							<div class="col-sm-12">
+								<a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
+							</div>
+
+							<div class="col-sm-12">
+								<a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
+								 VOLTAR
+								</a>
+							</div>
+
+						</div>
+
 					</div>
-		         </div>
+						<div class="col-md-3 info centrar">
 
-		      </div>
-		   </div>
 
-		<?php
+						<?php
+
+							if (have_posts()) :
+								while (have_posts()) : the_post(); ?>
+
+						</div>
+						<div class="col-md-8 borderesquerda noticia-cobaia">
+							<p>
+								<?php the_content(); ?>
+							</p>
+
+							<?php
+
+								endwhile;
+
+								else :
+									echo '<p>No content found</p>';
+
+							endif;
+							?>
+
+						</div>
+
+				</div>
+				<?php
+				break;
 		} ?>
+
 
 	</section>
 
