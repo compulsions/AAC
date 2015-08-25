@@ -97,6 +97,26 @@
 			   <?php
 				break;
 
+			case 'Núcleos':
+				include 'minimal_voltar.php';
+				break;
+
+			case 'Conselho de Veteranos':
+				include 'minimal.php';
+				break;
+
+			case 'Conselho Fiscal':
+				include 'minimal.php';
+				break;
+
+			case 'Mesa da Assembleia Magna':
+				include 'minimal.php';
+				break;
+				
+			case 'Queima das Fitas':
+				include 'minimal.php';
+				break;
+
 			case 'Notícias':
 
 				// Se for notícias, põe já o jquery e o fontawesome
