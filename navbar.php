@@ -45,7 +45,7 @@
 	    <div id="ApoioEstudanteA" class= "container navbar cor">
 	        <div class="collapse navbar-collapse navbar-menu cor">
 	        	<ul class="nav navbar-nav navbar-center pontos">
-		           <li><a href="<?php echo home_url( ) . "apoio-ao-estudante/emprego"; ?>">Emprego</a></li>
+		           <li><a href="<?php echo home_url( ) . "/apoio-ao-estudante/emprego"; ?>">Emprego</a></li>
 	        	</ul>
 	       </div>
 	    </div>
