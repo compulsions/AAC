@@ -2,6 +2,13 @@
 	Template Name: Repúblicas 2
 	*/
 
+	get_header();
+	//echo "<small>(A Mostrar só algumas categorias)</small>";
+	//echo "<h2>A mostrar posts da categoria: ". $custom_value[0] . "</h2>";
+
+	include 'navbar.php';
+	include 'slideshow.php';
+
 	$numRepublicas = 0;
 	$latRepublicas = array();
 	$longRepublicas = array();
@@ -26,15 +33,6 @@
 			$cat_id = $cat->term_id;
 		}
 	}
-
-
-
-	get_header();
-	//echo "<small>(A Mostrar só algumas categorias)</small>";
-	//echo "<h2>A mostrar posts da categoria: ". $custom_value[0] . "</h2>";
-
-	include 'navbar.php';
-	include 'slideshow.php';
 
 
 	// Mostrar conteúdo da página (introdução)
@@ -72,15 +70,16 @@
 
 
 	// Para cada república
-	query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
+	$args = array('cat' =>$cat_id, 'posts_per_page' => -1);
+	$query_republicas = new WP_Query( $args );
 
-	if (have_posts()) { ?>
+	if ($query_republicas->have_posts()) { ?>
 		<section>
 
 			<div class="container padding">
 				<div class="row">
 
-				<?php while (have_posts()) : the_post()?>
+				<?php while ($query_republicas->have_posts()) : $query_republicas->the_post()?>
 
 					<div id="republica<?php echo $numRepublicas; ?>" class="col-sm-6">
 						<div class="republica republica-block cor">
@@ -112,7 +111,9 @@
 					<?php
 					$numRepublicas++;
 
-					endwhile; ?>
+					endwhile;
+					wp_reset_postdata();
+					?>
 
 				</div>
 			</div>

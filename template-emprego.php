@@ -3,6 +3,8 @@
 Template Name: Emprego
 */
     get_header();
+    include 'navbar.php';
+    include 'slideshow.php';
 
     $cat_id;
     $cats = get_categories( );
@@ -27,8 +29,7 @@ Template Name: Emprego
 
     query_posts('cat=' . $cat_id);
 
-    include 'navbar.php';
-    include 'slideshow.php';
+
 
     if (have_posts()) { ?>
       <section>
