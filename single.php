@@ -133,6 +133,7 @@
 			case 'Queima das Fitas':
 				include 'minimal.php';
 				break;
+				
 
 			case 'Notícias':
 

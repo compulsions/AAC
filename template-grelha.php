@@ -70,7 +70,7 @@
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar altura">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
 							<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
-							<h4><?php echo $titulo; ?></h4>
+							<h4 style="height:50px;"><?php echo $titulo; ?></h4>
 						</a>
 						
 						
