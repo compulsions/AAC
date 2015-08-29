@@ -14,7 +14,7 @@
 		     		<li><a href="<?php echo home_url( ) . "/desporto"; ?>">DESPORTO</a></li>
 		     		<li><a id="cultura">CULTURA</a></li>
 		     		<li><a id="ApoioEstudante">APOIO AO ESTUDANTE</a></li>
-		     		<li><a href="<?php echo home_url( ) . "/contatos"; ?>">CONTACTOS</a></li>
+		     		<li><a href="<?php echo home_url( ) . "/contatos"; ?>">CONTATOS</a></li>
 
 
 	            </ul>

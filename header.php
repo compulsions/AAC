@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes( );?>>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php bloginfo('name'); ?></title>
 
 	<?php
@@ -12,9 +15,12 @@
 		endif;
 	?>
 
-    <meta charset="<?php bloginfo('charset'); ?>">
+
+    <!-- <meta charset="<?php bloginfo('charset'); ?>"> -->
 	<meta property="og:image" content="<?php echo $thumb[0]; ?>" />
     <?php wp_head(); ?>
+
+
 
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
