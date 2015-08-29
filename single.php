@@ -123,7 +123,7 @@
 				break;
 
 			case 'Conselho Fiscal':
-				include 'minimal.php';
+				include 'minimal_cf.php';
 				break;
 
 			case 'Mesa da Assembleia Magna':
