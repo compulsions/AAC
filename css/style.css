@@ -526,6 +526,7 @@ body.modal-open1 {
 	opacity: 1;
 	margin-top: 10px;
 	height: 150px;
+	    width: inherit;
 }
 
 .nucleos img:hover{
