@@ -25,8 +25,17 @@
     <?php
 
         if (have_posts()) :
-            while (have_posts()) : the_post(); ?>
+            while (have_posts()) : the_post(); 
+            echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
+            $link = 'https://www.facebook.com/';
+            $link_twitter = 'https://www.twitter.com/';
 
+         ?>
+        <div>
+        <a href="<?php echo $link; ?>" taget="_blank"><i class="fa fa-facebook-official"></i> Facebook</div></a>
+        <div>
+         <a href="<?php echo $link; ?>" taget="_blank"><i class="fa fa-twitter"></i> Twitter</div></a>
+        
     </div>
     <div class="col-md-8 borderesquerda noticia-cobaia">
         <p>

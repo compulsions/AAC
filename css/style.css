@@ -152,7 +152,7 @@ a:focus{
 	padding: 20px 40px;
     font-family: "Roboto";
     font-size: 7pt;
-    font-weight: 400;
+    line-height: 8pt;
 }
 
 .barra_preta p {
@@ -561,7 +561,7 @@ body.modal-open1 {
 }
 
 p{
-	font-size: 11pt;
+	font-size: 12pt;
 }
 
 .padding{
@@ -663,14 +663,14 @@ site-nav {
 .subtituloPag{
 	font-family: 'Roboto';
 	font-weight: 400;
-	font-size: 18pt;
+	font-size: 16pt;
    margin: 20px;
 }
 
 .subtituloPagM{
 	font-family: 'Roboto';
 	font-weight: 400;
-	font-size: 18pt;
+	font-size: 16pt;
 
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -700,7 +700,7 @@ site-nav {
 .tituloPag{
 	font-family: 'Roboto';
 	font-weight: 700;
-	font-size: 26pt;
+	font-size: 21pt;
    margin-top: 20px;
    margin-bottom: 10px;
    margin-left: 20px;
@@ -710,7 +710,7 @@ site-nav {
 	font-family: 'Roboto';
 	font-weight: 700;
 	text-align: left;
-	font-size: 26pt;
+	font-size: 21pt;
     margin: 20px;
 }
 
