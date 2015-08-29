@@ -55,8 +55,25 @@
 					query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 
 					?>
+					<div class="container cor">
+					    <div class="tituloPag">
 
-					<div class="container padding">
+					        <div class="row">
+					            <div class="col-sm-12">
+					                <a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
+					            </div>
+
+					            <div class="col-sm-12">
+					                <a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
+					                 VOLTAR
+					                </a>
+					            </div>
+
+					        </div>
+
+					    </div>
+   				   </div>
+	  				<div class="container padding">
 					  <div class="row">
 
 						 <div class="col-sm-3 col-xs-12 barralado carrega">
