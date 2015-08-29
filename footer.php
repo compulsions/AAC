@@ -4,9 +4,13 @@
 			<div class="row barra_preta">
 				<div class="col-md-3 col-sm-4 centrar footer-top">
 					<br>
-					<p><a href="https://www.facebook.com/DGAAC?fref=ts" target="_blank">Facebook</a></p>
-					<p><a href="http://original.livestream.com/tvaac" target="_blank">TVAAC</a></p>
-					<p><a href="http://www.ruc.pt/wp-content/themes/ruc/player.php#" target="_blank">RUC</a></p>
+					<p><a href="https://www.facebook.com/DGAAC?fref=ts" style="color:white;" target="_blank">
+						<i style=" margin-right:6px;" class="fa fa-facebook-official"></i> Facebook</a></p>
+
+						<p><a href="https://twitter.com/AAC_DG" style="color:white;" target="_blank">
+						<i style=" margin-right:6px;" class="fa fa-twitter"></i> Twitter</a></p>
+					<p style="margin-left:19px;"><a href="http://original.livestream.com/tvaac" target="_blank">TVAAC</a></p>
+					<p style="margin-left:19px;"><a href="http://www.ruc.pt/wp-content/themes/ruc/player.php#" target="_blank">RUC</a></p>
 				</div>
 
 				<div class="col-md-3 col-sm-4 centrar footer-top">
