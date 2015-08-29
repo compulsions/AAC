@@ -12,6 +12,8 @@
     padding-left: 15px;
     padding-right: 15px;
     position: relative;
+
+
 }
 
 @media (max-width: 384px) {
@@ -74,7 +76,9 @@
     }
 
     .col-xxs-12 {
-        width: 100%;
+         width: 94%;
+	    margin-left: 3%;
+	    margin-right: 3%;
     }
 
     .col-xxs-push-1 {

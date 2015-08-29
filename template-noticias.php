@@ -51,7 +51,7 @@
          <div class="row">
 
 
-		   <div class="col-sm-12 tituloPag"> <?php echo $title ?></div>
+		   <div class="col-sm-12 col-xs-12 col-xxs-12 tituloPag"> <?php echo $title ?></div>
          <div class="col-md-12">
          </div>
 
