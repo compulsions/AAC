@@ -18,7 +18,7 @@
 
     </div>
     <div class="col-md-3 info centrar">
-
+        <a href=""><?php get_tumnbnail(); ?></a>
 
     <?php
 
