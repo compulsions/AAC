@@ -585,7 +585,16 @@ p{
     margin-right: auto;
     margin-bottom: 10px;
 }
+.mais_emprego{
+	color: gray;
+	font-size: 13pt;
+	margin-bottom: 0px;
+}
+.nome_emprego{
+	font-size: 16pt; 
+	line-height: initial;
 
+}
 .pw_70 {
     width: 70%;
 }

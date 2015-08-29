@@ -3,8 +3,6 @@
 Template Name: Emprego
 */
     get_header();
-    include 'navbar.php';
-    include 'slideshow.php';
 
     $cat_id;
     $cats = get_categories( );
@@ -26,28 +24,34 @@ Template Name: Emprego
             $cat_id = $cat->term_id;
         }
     }
-
+     
     query_posts('cat=' . $cat_id);
 
+    include 'navbar.php';
+    include 'slideshow.php';
 
-
-    if (have_posts()) { ?>
+    if (have_posts()) { 
+     ?>
       <section>
          <div class="container">
 
-            <?php while (have_posts()) : the_post(); ?>
+            <?php while (have_posts()) : the_post(); 
+               $content = get_the_content('');
+              // conteudo a ser cortado, número de palavras que aparecem, texto de read more
+               $reduzido = wp_trim_words( $content, 75, '' );?>
 
                <div class="row emprego-row">
                   <div class="col-sm-3 col-xs-12 carrega cor n" >
                      <div class="cor">
-                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <h2 class="nome_emprego" ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                      </div>
                   </div>
 
                   <div class="col-sm-9 col-xs-12 carrega cor d">
                      <div class="cor">
-                        <?php the_content('Mais informações..'); ?>
+                        <?php echo $reduzido." ..."; ?>
                      </div>
+                     <a align="right" href="<?php the_permalink(); ?>" class="mais_emprego"><p>Mais Informações</p></a>
                   </div>
                </div>
 
