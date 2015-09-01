@@ -592,7 +592,7 @@ p{
 	margin-bottom: 0px;
 }
 .nome_emprego{
-	font-size: 16pt; 
+	font-size: 16pt;
 	line-height: initial;
 
 }
@@ -760,6 +760,17 @@ site-nav {
 
 	height: 350px;
 }
+}
+
+/* Div de overlay do google maps, para ele não ficar com o zoom irritante */
+.mapa-overlay {
+   background:transparent;
+   position:relative;
+   width:500px;
+   height:155px; /* your iframe height */
+   top:155px;  /* your iframe height */
+   margin-top:-155px;  /* your iframe height */
+   z-index: 100;
 }
 
 @media(max-width: 1200px){
