@@ -60,6 +60,21 @@
 		<br>
    </section>
 
+   <section>
+        <div id="livro" class="container centrar cor">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 col-xxs-12 tituloPag">
+                    <h2>
+                        <a href="http://novo.academica.pt/wp-content/uploads/2015/09/uma-visao-de-futuro.pdf">
+                            Educação: Uma Visão de Futuro - pdf
+                        </a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br>
+  </section>
+
 	<?php
 	if (have_posts()) { ?>
 
