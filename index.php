@@ -59,6 +59,7 @@
     	query_posts($args);
 
 		include 'navbar.php';
+        include 'slideshow.php';
 
     	if (have_posts()) { ?>
 
