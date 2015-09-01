@@ -26,10 +26,10 @@
 	        <div class="collapse navbar-collapse navbar-menu cor">
 	         	<ul class="nav navbar-nav navbar-center pontos">
 		            <li><a href="<?php echo home_url( ) . "/noticias"; ?>">Notícias</a></li>
-			 		<li><a href="<?php echo home_url( ) . "/republicas-2"; ?>">Repúblicas</a></li>
+
 			 		<li><a href="<?php echo home_url( ) . "/festa-das-latas"; ?>">Festa das Latas</a></li>
 			 		<li><a href="<?php echo home_url( ) . "/queima-das-fitas"; ?>">Queima das Fitas</a></li>
-			 		<li><a href="<?php echo home_url( ) . "/conselho-de-veteranos"; ?>">Conselho de Veteranos</a></li>
+
 	        	</ul>
 	        </div>
 	    </div>
@@ -55,6 +55,8 @@
 		            <li><a href="<?php echo home_url( ) . "/seccoes-culturais"; ?>">Secções Culturais</a></li>
 			 		<li><a href="<?php echo home_url( ) . "/grupos-academicos"; ?>">Grupos Académicos</a></li>
 			 		<li><a href="<?php echo home_url( ) . "/organismos-autonomos"; ?>">Organismos Autónomos</a></li>
+					<li><a href="<?php echo home_url( ) . "/republicas-2"; ?>">Repúblicas</a></li>
+					<li><a href="<?php echo home_url( ) . "/conselho-de-veteranos"; ?>">Conselho de Veteranos</a></li>
 	        	</ul>
 	        </div>
 	    </div>
