@@ -99,11 +99,12 @@
 								array_push($longRepublicas, $long_temp[0]);
 
 								// Div para impedir o zoom irritante do google map
+								//<div class="mapa-overlay" onClick="style.pointerEvents='none'"></div>
+								//<div id="mapa<?php //echo $numRepublicas; ?><?php//" class="mapa">
+								//	<p><div id="mapa-<?php //echo $numRepublicas ?><?php//" style="height:150px;"></div></p>
+								//</div>
 								?>
-								<div class="mapa-overlay" onClick="style.pointerEvents='none'"></div>
-								<div id="mapa<?php echo $numRepublicas; ?>" class="mapa">
-									<p><div id="mapa-<?php echo $numRepublicas ?>" style="height:150px;"></div></p>
-								</div>
+
 
 							</a>
 						</div>
