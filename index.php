@@ -5,7 +5,8 @@
     <div>
 		<div class="gallery js-flickity"  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false ,"wrapAround": true, "freeScroll": true}'>
 		  <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/1.png"?>" alt="..." />
-		  <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/1.png"?>" alt="..."s />
+		  <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/2.jpg"?>" alt="..." />
+          <img class="homepagefoto" src="<?php echo get_template_directory_uri() . "/img/3.jpg"?>" alt="..." />
 		</div>
 
 
