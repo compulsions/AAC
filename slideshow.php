@@ -3,7 +3,7 @@
 		<div class="container cor" id="show">
 			<div class="col-md-8">
 				<div class="gallery js-flickity"  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false ,"autoPlay":5000, "wrapAround": true, "freeScroll": true}'>
-			 	 	<img class="slides" src="<?php echo get_template_directory_uri() ?>/img/capa1.png" alt="..." />
+			 	 	<img class="slides" src="<?php echo get_template_directory_uri() ?>/img/evento.png" alt="..." />
 			  		<img class="slides" src="<?php echo get_template_directory_uri() ?>/img/capa2.jpg" alt="..." />
 			  		<img class="slides" src="<?php echo get_template_directory_uri() ?>/img/capa3.jpg" alt="" />
 			  	</div>
