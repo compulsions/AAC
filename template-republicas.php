@@ -83,7 +83,7 @@
 
 					<div id="republica<?php echo $numRepublicas; ?>" class="col-sm-6">
 						<div class="republica republica-block cor">
-							<a href="<?php echo get_permalink(); ?>">
+							<a>
 
 								<div class="subtituloPagM"><?php echo get_the_title(); ?></div>
 
