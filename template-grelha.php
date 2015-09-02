@@ -84,17 +84,17 @@
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar altura">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
 							<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
-							<h4 style="height:50px;"><?php echo $titulo; ?></h4>
+							<h4 style="height: 50px;"><?php echo $titulo; ?></h4>
 						</a>
-						
-						
+
+
 					</div>
 
 					<?php
 
-				} else { 
+				} else {
 
-					
+
 
 					?>
 
@@ -102,12 +102,12 @@
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
 							<img  src=" <?php echo get_template_directory_uri() . '/img/notfound.png'; ?>" alt="secção desportiva">
-							<h4><?php echo $titulo; ?></h4>
+							<h4 style="height: 50px;"><?php echo $titulo; ?></h4>
 						</a>
 
 					</div>
 
-				<?php 
+				<?php
 				}
 				//the_content( ); ?>
 			</article>
