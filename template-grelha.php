@@ -7,6 +7,8 @@
 	$cats = get_categories( );
 
 	$custom_value = get_post_custom_values('categoria');
+	$page_title = $custom_value[0];
+
 	//echo "Custom value desta página: " . $custom_value[0] . "<br>";
 	//print_r($cats);
 
@@ -36,11 +38,23 @@
 	include 'slideshow.php';
 
 	if (have_posts()) { ?>
+		<section>
+			<div id="noticias" class="container centrar cor">
+	         <div class="row">
+
+
+			   <div class="tituloPag" style="text-align: center; margin-left: 0;"> <?php echo $page_title ?></div>
+	         <div class="col-md-12">
+	         </div>
+
+	         </div>
+			</div>
+			<br>
+	   </section>
 
 		<section>
 			<div class="container carrega cor">
-				<div class="tituloPag"> <?php echo $custom_value[0] ?></div>
-				<div class="info nucleos">	
+				<div class="info nucleos" style="padding-top: 40px;">
 
 		<?php while (have_posts()) : the_post()?>
 
