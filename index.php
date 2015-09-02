@@ -110,8 +110,8 @@
                 </div>
 
                 <div class="row">
-                   <div class="pull-left col-sm-6"><?php next_posts_link( '<  Notícias mais antigas' ); ?></div>
-                   <div class="pull-right col-sm-6"><?php previous_posts_link( ' Notícias mais recentes >' ); ?></div>
+                    <div class="alignleft col-sm-6"><?php previous_posts_link( '< Notícias mais recentes' ); ?></div>
+                    <div class="alignright col-sm-6"><?php next_posts_link( ' Notícias mais antigas >' ); ?></div>
                 </div>
 
     		</div>
