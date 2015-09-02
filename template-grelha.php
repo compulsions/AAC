@@ -9,7 +9,6 @@
 	$custom_value = get_post_custom_values('categoria');
 	$page_title = $custom_value[0];
 
-	$n = 0;
 
 	//echo "Custom value desta página: " . $custom_value[0] . "<br>";
 	//print_r($cats);
@@ -110,7 +109,6 @@
 					</div>
 
 				<?php
-				n++;
 				}
 				//the_content( ); ?>
 
