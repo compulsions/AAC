@@ -63,14 +63,18 @@
    <section>
         <div id="livro" class="container centrar cor">
             <div class="row">
-                <div class="col-sm-12 col-xs-12 col-xxs-12 tituloPag">
-                    <h2>
-                        <a href="http://novo.academica.pt/wp-content/uploads/2015/09/uma-visao-de-futuro.pdf">
-                            Educação: Uma Visão de Futuro - pdf
-                        </a>
-                    </h2>
+                <div class="col-sm-6 col-xs-6 col-xxs-12 ">
+                  <h2 class="tituloPDF">Podes consultar aqui o livro “Educação: Uma Visão de Futuro” </h2>
                 </div>
-            </div>
+                <div class="col-md-6 livro-edu">
+                   <h2>
+                    <a href="http://novo.academica.pt/wp-content/uploads/2015/09/uma-visao-de-futuro.pdf" target="_blank">
+                     Educação: Uma Visão de Futuro - pdf
+                  </a>
+                  </h2>
+                </div>
+                    
+              </div>
         </div>
         <br>
   </section>

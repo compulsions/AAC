@@ -1,6 +1,4 @@
-.altura{
-	height: 220px;
-}
+
  body{
 	background-color: #DEDEDE;
 	font-size: 11pt;
@@ -26,11 +24,42 @@ a:focus{
   text-decoration: none;
 
 }
+
+.tituloPDF{
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 18pt;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 20px;
+}
+.livro-edu h2 a{
+	color: gray;
+	background-color: transparent;
+	border: 1px solid gray;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	padding-right: 30px;
+	padding-left: 30px;
+	font-size: 14pt;
+	font-weight: 300;
+}
+
+.livro-edu h2 a:hover {
+	color: white;
+	background-color: lightgray;	
+	border: 1px solid lightgray;
+
+}
+
 	.button_fb:hover{
      		color:gray;
      		cursor: pointer;
 
      	}
+}
 .aac2 {
 	position: absolute;
 	opacity: 1;
