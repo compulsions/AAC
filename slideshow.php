@@ -50,7 +50,7 @@
 								}
 						   ?>
 
-		                      <li><a href="<?php echo $link[0] ?>"><?php echo get_the_title(); ?></a></li>
+		                      <li><a href="<?php echo $link[0] ?>" target="_blank"><?php echo get_the_title(); ?></a></li>
 
 		                   <?php endwhile;
 		                }

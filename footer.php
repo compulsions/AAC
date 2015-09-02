@@ -45,7 +45,7 @@
 					</div>
 
 					<div class="col-md-4 col-sm-2 col-xs-4 centrar">
-						<a href="https://www.montepio.pt"><img align="center" class="patro pw_100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/montepio.png" ?>"></a>
+						<a href="https://www.montepio.pt" target="_blank"><img align="center" class="patro pw_100" align="center" src="<?php echo get_template_directory_uri() . "/img/patrocinadores/montepio.png" ?>"></a>
 					</div>
 
 					<div class="col-md-4 col-sm-2 col-xs-4 centrar">
