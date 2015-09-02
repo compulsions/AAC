@@ -758,7 +758,7 @@ site-nav {
 	margin-bottom: 20px;
 	line-height: 18px;
 
-	height: 350px;
+	height: 160px;
 }
 }
 
@@ -795,7 +795,7 @@ site-nav {
 	margin-bottom: 20px;
 	line-height: 18px;
 
-	height: 350px;
+	height: 160px;
     }
 }
 
@@ -830,7 +830,7 @@ site-nav {
 
 }
 .republica-block{
-	height: 420px;
+	height: 150px;
 }
 }
 @media (max-width: 768px){
