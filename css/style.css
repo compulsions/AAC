@@ -24,16 +24,22 @@ a:focus{
   text-decoration: none;
 
 }
-
+.blockPDF{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
 .tituloPDF{
 	font-family: 'Roboto';
 	font-weight: 400;
 	font-size: 18pt;
-   margin-top: 20px;
-   margin-bottom: 20px;
-   margin-left: 20px;
+   margin-top: 0px;
+   margin-bottom: 8px;
+}
+.livro-edu{
+	margin-bottom: 20px;
 }
 .livro-edu h2 a{
+
 	color: gray;
 	background-color: transparent;
 	border: 1px solid gray;
