@@ -9,6 +9,8 @@
 	$custom_value = get_post_custom_values('categoria');
 	$page_title = $custom_value[0];
 
+	$n = 0;
+
 	//echo "Custom value desta página: " . $custom_value[0] . "<br>";
 	//print_r($cats);
 
@@ -26,7 +28,7 @@
 		}
 	}
 
-	
+
 	//Mostra todas as páginas dessa categoria
 	query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 
@@ -58,7 +60,7 @@
 
 		<?php while (have_posts()) : the_post()?>
 
-			<article>
+
 				<?php
 
 				if ($pagename == 'nucleos-2') {
@@ -67,13 +69,13 @@
 				else {
 					$titulo = get_the_title();
 				}
-				
+
 
 				if ( has_post_thumbnail() ) {
 
 					//$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
 					//echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '" >';
-					//echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); 
+					//echo get_the_post_thumbnail( $post->ID, 'thumbnail' );
 					//echo '</a>';
 
 					//$meta =  get_post_meta(get_the_id(), 'sigla', true);
@@ -81,10 +83,10 @@
 
 					?>
 
-					<div class="col-md-3 col-sm-4 col-xs-6 centrar altura">
+					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
 							<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
-							<h4 style="height: 50px;"><?php echo $titulo; ?></h4>
+							<h4><?php echo $titulo; ?></h4>
 						</a>
 
 
@@ -102,15 +104,16 @@
 					<div class="col-md-3 col-sm-4 col-xs-6 centrar">
 						<a href="<?php the_permalink(); ?>"  class="radius button">
 							<img  src=" <?php echo get_template_directory_uri() . '/img/notfound.png'; ?>" alt="secção desportiva">
-							<h4 style="height: 50px;"><?php echo $titulo; ?></h4>
+							<h4><?php echo $titulo; ?></h4>
 						</a>
 
 					</div>
 
 				<?php
+				n++;
 				}
 				//the_content( ); ?>
-			</article>
+
 
 		<?php endwhile; ?>
 
