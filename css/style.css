@@ -55,7 +55,7 @@ a:focus{
 
 .livro-edu h2 a:hover {
 	color: white;
-	background-color: lightgray;	
+	background-color: lightgray;
 	border: 1px solid lightgray;
 
 }
@@ -812,6 +812,22 @@ site-nav {
    z-index: 100;
 }
 
+/* Index */
+.index-titulo {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 7%;
+}
+
+.index-titulo img {
+    width: 30%;
+}
+
+.index-titulo h1 {
+    padding-top: 17%;
+}
+
 @media(max-width: 1200px){
 
     .cenas{
@@ -961,7 +977,7 @@ site-nav {
     .diminui{
         font-size: 11pt;
     }
-    
+
 
 }
 @media (max-width: 385px){

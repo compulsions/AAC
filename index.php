@@ -10,7 +10,7 @@
 		</div>
 
 
-		<div class="container titulo">
+		<div class="titulo index-titulo">
 			<a href="index.php"><img src="<?php echo get_template_directory_uri() . "/img/aac2.png"?>" alt="aac" class="aac2"> </a>
 			<h1 class="cenas"> Associação Académica de Coimbra </h1>
 		</div>
