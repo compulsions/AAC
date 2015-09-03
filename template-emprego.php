@@ -33,6 +33,11 @@ Template Name: Emprego
     if (have_posts()) { 
      ?>
       <section>
+      <div class="container" style="margin-bottom:25px;">
+        <div class="row cor">
+          <div class="col-md-12 tituloPag centrar" > <?php echo $custom_value[0] ?></div>
+        </div>
+      </div>
          <div class="container">
 
             <?php while (have_posts()) : the_post(); 
