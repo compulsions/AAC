@@ -19,9 +19,9 @@
     <div class="col-md-3 info centrar">
         <?php
         if (has_post_thumbnail()) {
-            echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));?>
-        }
-        
+            echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
+        }?>
+
     <?php
 
         if (have_posts()) :

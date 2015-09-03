@@ -134,6 +134,10 @@
 				include 'minimal.php';
 				break;
 
+			case 'Festa das Latas e Imposição de Insígnias':
+				include 'minimal.php';
+				break;
+
 			case 'Secções Culturais':
 				include 'minimal_voltar.php';
 				break;
