@@ -41,13 +41,13 @@ Template Name: Emprego
                $reduzido = wp_trim_words( $content, 75, '' );?>
 
                <div class="row emprego-row">
-                  <div class="col-sm-3 col-xs-12 carrega cor n" >
+                  <div class="col-md-3 col-sm-3 col-xs-12 carrega cor n" style="margin-bottom:20px;">
                      <div class="cor">
-                        <h2 class="nome_emprego" ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <h2 class="nome_emprego"  ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                      </div>
                   </div>
 
-                  <div class="col-sm-9 col-xs-12 carrega cor d">
+                  <div class="col-md-8 col-sm-8 col-xs-12 carrega cor d">
                      <div class="cor">
                         <?php echo $reduzido." ..."; ?>
                      </div>
