@@ -401,11 +401,14 @@ input[type="text"] {
     width: 100%;
     text-align: left;
 }
-
 .lermais{
+	margin-top: 20px;
+}
+.lermais a{
 	color:gray;
 	text-align: right;
 	margin-bottom: 20px;
+	margin-top: 15px;
 }
 
 .listaDG{
@@ -833,6 +836,9 @@ site-nav {
 
 	height: 160px;
     }
+    .noticia-block{
+    	height: 490px;
+    }
 }
 
 @media(max-width: 1024px){
@@ -893,7 +899,10 @@ site-nav {
 	width:100%;
 	height: auto;
 	overflow: hidden;
-}
+	}
+	.noticia-block{
+	height: 450px;
+	}
 
 
 }
@@ -918,11 +927,16 @@ site-nav {
         margin-top: 2px;
     }
 
+	.noticia-block{
+	height: 470px;
+	}
+
+
 }
 @media (max-width: 480px){
 
 	.noticia-block{
-		height: 520px;
+		height: 540px;
 	}
 
     .aac img {
@@ -947,8 +961,10 @@ site-nav {
     .diminui{
         font-size: 11pt;
     }
+    
+
 }
-@media (max-width: 350px){
+@media (max-width: 385px){
 	.aac img{
 		width:20%;
 	}

@@ -90,7 +90,7 @@
 
            <?php $content = get_the_content('');
                // conteudo a ser cortado, número de palavras que aparecem, texto de read more
-               $reduzido = wp_trim_words( $content, 25, '' ); ?>
+               $reduzido = wp_trim_words( $content, 20, '' ); ?>
 
 
    			<div id="noticia<?php echo $numNoticias; ?>" class="col-md-3 col-sm-4 col-xs-6 col-xxs-12 blockR">
@@ -119,7 +119,7 @@
 
    					<?php echo $reduzido ?>
                   <br>
-   					<a class="lermais" href="<?php echo get_permalink( ); ?>"> Ler mais </a>
+   					<div class="lermais"><a  href="<?php echo get_permalink( ); ?>"> Ler mais </a></div>
    				</a>
 
    				</div>
