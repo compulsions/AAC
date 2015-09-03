@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-
 <div class="container cor">
     <div class="tituloPag">
 
@@ -18,8 +17,11 @@
 
     </div>
     <div class="col-md-3 info centrar">
-        <a href=""><?php get_tumnbnail(); ?></a>
-
+        <?php
+        if (has_post_thumbnail()) {
+            echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));?>
+        }
+        
     <?php
 
         if (have_posts()) :

@@ -129,11 +129,23 @@
 			case 'Mesa da Assembleia Magna':
 				include 'minimal.php';
 				break;
-				
+
 			case 'Queima das Fitas':
 				include 'minimal.php';
 				break;
-				
+
+			case 'Secções Culturais':
+				include 'minimal_voltar.php';
+				break;
+
+			case 'Organismos Autónomos':
+				include 'minimal_voltar.php';
+				break;
+
+			case 'Grupos Académicos':
+				include 'minimal_voltar.php';
+				break;
+
 
 			case 'Notícias':
 
