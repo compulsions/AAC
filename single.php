@@ -178,34 +178,38 @@
 						</div>
 
 					</div>
-						<div class="col-md-3 info centrar">
+						<!-- <div class="col-md-3 info centrar"> -->
 
 
-						<?php
-							echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
 
-							// Nota: o início do loop não devia estar aqui, mas como é a página single, e ele vai ter sempre obrigatoriamente só um post
-							// abre-se aqui para conseguir por o link e descição no btn de partilhar
 
-							if (have_posts()) :
-								while (have_posts()) : the_post();
-
-								$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-								$content = get_the_content('');
-								$content = wp_trim_words( $content, 25, '' );
-								$link = get_permalink();
-								//$link = str_replace('//', 'p%3A%2F%2F', $link);
-								$link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
-						?>
-
-									<div class="button_fb" id="share_button" >
-										<a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-facebook-official"></i> Partilhar </a>
-									</div>
-
-						</div>
-						<div class="col-md-8 borderesquerda noticia-cobaia">
+						<!-- </div> -->
+						<div class="col-md-8 col-md-offset-2 col-sm-12 info borderesquerda noticia-cobaia">
 							<p>
+								<?php
+									//echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
+
+									// Nota: o início do loop não devia estar aqui, mas como é a página single, e ele vai ter sempre obrigatoriamente só um post
+									// abre-se aqui para conseguir por o link e descição no btn de partilhar
+
+									if (have_posts()) :
+										while (have_posts()) : the_post();
+
+										$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+										$content = get_the_content('');
+										$content = wp_trim_words( $content, 25, '' );
+										$link = get_permalink();
+										//$link = str_replace('//', 'p%3A%2F%2F', $link);
+										$link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
+								?>
+
+
+
 								<?php the_content(); ?>
+
+								<div class="button_fb" id="share_button" >
+									<a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-facebook-official"></i> Partilhar </a>
+								</div>
 							</p>
 
 							<?php
