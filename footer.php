@@ -7,28 +7,27 @@
 					<p><a href="https://www.facebook.com/DGAAC?fref=ts" style="color:white;" target="_blank">
 						<i style="margin-right:11px;" class="fa fa-facebook"></i> Facebook</a></p>
 
-					<p><a href="https://twitter.com/AAC_DG" style="color:white;" target="_blank">
-						<i style=" margin-right:5px;" class="fa fa-twitter"></i> Twitter</a></p>
+					<!-- <p><a href="https://twitter.com/AAC_DG" style="color:white;" target="_blank">
+						<i style=" margin-right:5px;" class="fa fa-twitter"></i> Twitter</a></p> -->
 					<p style="margin-left:19px;"><a href="http://original.livestream.com/tvaac" target="_blank">TVAAC</a></p>
 					<p style="margin-left:19px;"><a href="http://www.ruc.pt/wp-content/themes/ruc/player.php#" target="_blank">RUC</a></p>
 				</div>
 
 				<div class="col-md-3 col-sm-4 centrar footer-top">
-					<br>
 					<p>Tel: 239 410 400</p>
 					<p>Fax: 239 410 439</p>
 					<p>
 						<a href="mailto:geral@academica.pt">geral@academica.pt</a>
 					</p>
-					<p>
-						<a href="mailto:assessoria.imprensa@academica.pt">assessoria.imprensa@academica.pt</a>
-					</p>
+
 				</div>
 
 
 				<div class="col-md-3 col-sm-4 centrar footer-top">
-					<address>
-					<br>
+					<p>
+						<a href="mailto:assessoria.imprensa@academica.pt">assessoria.imprensa@academica.pt</a>
+					</p>
+					<address style="line-height: 1;">
 					<p>Rua Padre António Vieira N.º 1</p>
 					<p>3000-315 Coimbra, Portugal</p>
 					</address>
