@@ -134,7 +134,7 @@
 				include 'minimal.php';
 				break;
 
-			case 'Festa das Latas e Imposição de Insígnias':
+			case 'Festa das Latas':
 				include 'minimal.php';
 				break;
 

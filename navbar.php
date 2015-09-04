@@ -27,7 +27,7 @@
 	         	<ul class="nav navbar-nav navbar-center pontos">
 		            <li><a href="<?php echo home_url( ) . "/noticias"; ?>">Notícias</a></li>
 
-			 		<li><a href="<?php echo home_url( ) . "/festa-das-latas"; ?>">Festa das Latas</a></li>
+			 		<li><a href="<?php echo home_url( ) . "/festa-das-latas-e-imposicao-de-insignias"; ?>">Festa das Latas</a></li>
 			 		<li><a href="<?php echo home_url( ) . "/queima-das-fitas"; ?>">Queima das Fitas</a></li>
 
 	        	</ul>
