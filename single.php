@@ -55,24 +55,6 @@
 					query_posts(array('cat' =>$cat_id, 'posts_per_page' => -1));
 
 					?>
-					<div class="container cor">
-					    <div class="tituloPag">
-
-					        <div class="row">
-					            <div class="col-sm-12">
-					                <a href=""><?php echo $cat->name; ?> <?php the_title(); ?></a>
-					            </div>
-
-					            <div class="col-sm-12">
-					                <a href="<?php echo $link_to_previous ?>" align="right" class ="botao_voltar">
-					                 VOLTAR
-					                </a>
-					            </div>
-
-					        </div>
-
-					    </div>
-   				   </div>
 	  				<div class="container padding">
 					  <div class="row">
 
@@ -99,6 +81,9 @@
 
 						 <div class="col-sm-9 col-xs-12">
 							 <div class="corpolado cor">
+								 <div class="tituloPag" style="margin-left: 0px;">
+								 	<a href=""><?php the_title(); ?></a>
+								 </div>
 								<?php
 									if (have_posts()) {
 										while (have_posts()) : the_post();
@@ -150,6 +135,10 @@
 				include 'minimal_voltar.php';
 				break;
 
+			case 'Secções Desportivas':
+				include 'minimal_voltar.php';
+				break;
+
 
 			case 'Notícias':
 
@@ -178,38 +167,34 @@
 						</div>
 
 					</div>
-						<!-- <div class="col-md-3 info centrar"> -->
+						<div class="col-md-2 col-sm-12 info centrar">
+						<?php
+							//echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
 
+							// Nota: o início do loop não devia estar aqui, mas como é a página single, e ele vai ter sempre obrigatoriamente só um post
+							// abre-se aqui para conseguir por o link e descição no btn de partilhar
 
+							if (have_posts()) :
+								while (have_posts()) : the_post();
 
+								$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+								$content = get_the_content('');
+								$content = wp_trim_words( $content, 25, '' );
+								$link = get_permalink();
+								//$link = str_replace('//', 'p%3A%2F%2F', $link);
+								$link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
+						?>
 
-						<!-- </div> -->
-						<div class="col-md-8 col-md-offset-2 col-sm-12 info borderesquerda noticia-cobaia">
+						<div class="button_fb" id="share_button" >
+							<a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-facebook-official"></i> Partilhar </a>
+						</div>
+
+						</div>
+						<div class="col-md-8 col-sm-12 info borderesquerda noticia-cobaia">
 							<p>
-								<?php
-									//echo get_the_post_thumbnail( $post->ID, 'thumbnail', array('width' => '90%'));
-
-									// Nota: o início do loop não devia estar aqui, mas como é a página single, e ele vai ter sempre obrigatoriamente só um post
-									// abre-se aqui para conseguir por o link e descição no btn de partilhar
-
-									if (have_posts()) :
-										while (have_posts()) : the_post();
-
-										$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-										$content = get_the_content('');
-										$content = wp_trim_words( $content, 25, '' );
-										$link = get_permalink();
-										//$link = str_replace('//', 'p%3A%2F%2F', $link);
-										$link = 'https://www.facebook.com/sharer/sharer.php?u='.$link;
-								?>
-
-
 
 								<?php the_content(); ?>
 
-								<div class="button_fb" id="share_button" >
-									<a href="<?php echo $link; ?>" target="_blank"><i class="fa fa-facebook-official"></i> Partilhar </a>
-								</div>
 							</p>
 
 							<?php
